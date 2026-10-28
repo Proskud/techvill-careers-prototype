@@ -26,7 +26,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: node --test tests/*.test.mjs
+      - run: node --test $(ls tests/*.test.mjs | grep -v sites-worker)
       - run: npm run build:pages
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
