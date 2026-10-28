@@ -1,0 +1,1753 @@
+{
+  "created_date": "2026-10-28",
+  "source_commit": "a3e0bd9462bfc3e6288f078ef542de04d7d9ef5d",
+  "last_recorded_published_version": 45,
+  "excluded": [
+    "node_modules/",
+    ".git/",
+    ".DS_Store",
+    "__pycache__/"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 34,
+      "sha256": "8fdeee43e51c4a95b572815d82906c90d809a640bb5b89567d7088cb873b2bfc"
+    },
+    {
+      "path": ".npmrc",
+      "bytes": 23,
+      "sha256": "f7dbda001b627b3a792fb6929303b517f047f03916f2c55227e81216d38a2008"
+    },
+    {
+      "path": ".openai/hosting.json",
+      "bytes": 91,
+      "sha256": "3598bbf54acc8fa05bbf6b27abe0f3e619b6ae32ec18449ceadfeaac56cf2326"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 35033,
+      "sha256": "3c0428996df2daa3e0b1fc103f873face971a32467e353fb5c64d15ccb6beb0a"
+    },
+    {
+      "path": "AI-LAYOUT-QA-2026-10-08.md",
+      "bytes": 1764,
+      "sha256": "3f9100e82924ef8323eb1f8d914d48a0ba4c13ace55996bfe4f00cab825d795a"
+    },
+    {
+      "path": "LAYOUT-QA-2026-10-07.md",
+      "bytes": 4915,
+      "sha256": "c99db73b5f685b54848cf87fb82520cb621df8d6c8e0863620a2445408890358"
+    },
+    {
+      "path": "QA-2026-10-09.md",
+      "bytes": 10598,
+      "sha256": "8689ead5a9b9d347dcaa9f7041e149361e6adf489d34f640147d95e6df35d2c1"
+    },
+    {
+      "path": "QA-2026-10-12.md",
+      "bytes": 2099,
+      "sha256": "24ccbac807089039dcac2e654f69fc4db49abb7fc09ccf055b4706f2aa8b5d23"
+    },
+    {
+      "path": "QA-AI-INTERFACE-2026-10-13.md",
+      "bytes": 5272,
+      "sha256": "aebcecf55d87b278224baec890b16281236ea68097a1afa9106a489c32ea8d32"
+    },
+    {
+      "path": "QA-AVOCADO-HINT-2026-10-16.md",
+      "bytes": 3415,
+      "sha256": "64666ba9987de850f6e8c13ee9235d54166160536f8035bbc2390e4458e6b1d5"
+    },
+    {
+      "path": "QA-COMPACT-LAYOUT-2026-10-21.md",
+      "bytes": 6608,
+      "sha256": "70b31515c53a7239f675a6bdf9a3842efda8497a7d204a7786dcd94fd8b768df"
+    },
+    {
+      "path": "QA-FIGMA-2026-10-12.md",
+      "bytes": 25488,
+      "sha256": "b643bd82a4dc926088f118d5916ecb35d6849d09271b74c1e3470117aeb68e5f"
+    },
+    {
+      "path": "QA-FOOTER-SOCIALS-2026-10-21.md",
+      "bytes": 3320,
+      "sha256": "4fdd6e093bcebe67a26718de1fd04be77c706598cd4701906d0e10910670ba1f"
+    },
+    {
+      "path": "QA-LOGO-LAYOUT-2026-10-13.md",
+      "bytes": 1866,
+      "sha256": "12912d290de63c04c2a812c6b2a0372f366d8c3735bc8816b2a869e0beab42e2"
+    },
+    {
+      "path": "QA-PEOPLE-EDITORIAL-2026-10-19.md",
+      "bytes": 4607,
+      "sha256": "75398e0c96637a476ad8995e09c54bc1ae394c795df93c2ce0d4ec173a23f0b5"
+    },
+    {
+      "path": "QA-SERVICES-VALUES-2026-10-21.md",
+      "bytes": 7788,
+      "sha256": "b8d674654ad85c2e0f7232f39abc18f8aa25286ebb60e2ba1b6289453905210b"
+    },
+    {
+      "path": "QA-STORY-PORTRAITS-2026-10-28.md",
+      "bytes": 2781,
+      "sha256": "2cc56cba2ed159c89e7be845c82629ef2f65eb842e068cc4c94299dfc75d6dfa"
+    },
+    {
+      "path": "QA-TEAM-HINTS-2026-10-19.md",
+      "bytes": 5007,
+      "sha256": "ffbca32dbadac0c5bea955f55556101d9cebbe7eaee36875d3776442e2602739"
+    },
+    {
+      "path": "QA-TYPOGRAPHY-2026-10-28.md",
+      "bytes": 5872,
+      "sha256": "4cf0ed1fcfefebac1c8b0fbb6fccfa24c00802e2487ef453d9cb8ecff99c669a"
+    },
+    {
+      "path": "QA-VALUES-HOVER-2026-10-21.md",
+      "bytes": 3519,
+      "sha256": "14a915d84d150db8f9df71b9dde00133c728ed0a4d129113bb96abc684c96783"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1826,
+      "sha256": "21ba32b77770bcce5e0b52cd25c8406304da7cd0d65fb0f266857a5b35649444"
+    },
+    {
+      "path": "design-qa-positioning-2026-09-29.md",
+      "bytes": 5148,
+      "sha256": "3dbb7d03ea31a9464e1f2e5e340911561a16948aa898d43a60028eb4117792b4"
+    },
+    {
+      "path": "design-qa.md",
+      "bytes": 18389,
+      "sha256": "87f7d011940e89083ca5a5847cda3f0df7883cfbf469c81da956afbc976e945e"
+    },
+    {
+      "path": "dist/.openai/hosting.json",
+      "bytes": 91,
+      "sha256": "3598bbf54acc8fa05bbf6b27abe0f3e619b6ae32ec18449ceadfeaac56cf2326"
+    },
+    {
+      "path": "dist/client/_headers",
+      "bytes": 37,
+      "sha256": "81b7e47e630266ed43d96495e2bf8f8938ff5bf9bc30098b3fa1d388eb908fb3"
+    },
+    {
+      "path": "dist/client/assets/ExperienceCanvas-BLuOzxBU.js",
+      "bytes": 12303,
+      "sha256": "65b2664977ba4fa8c9cf1ad96303b113b63f94befdc2eb2c4c0c316060379cdb"
+    },
+    {
+      "path": "dist/client/assets/HeroFruitCanvas-BgamLQkT.js",
+      "bytes": 7627,
+      "sha256": "83aa9f174b2e23f19c11b1d7efc313f35f918b50c90ffd4f6820a38eef276d12"
+    },
+    {
+      "path": "dist/client/assets/PeopleBentoFruit-lPIMpEym.js",
+      "bytes": 2898,
+      "sha256": "3ffdb998107f3d4dd293c31dff6450160ddc3f63066c6d1eff894574195c718c"
+    },
+    {
+      "path": "dist/client/assets/PeopleFruitCanvas-DjzmoWcQ.js",
+      "bytes": 4235,
+      "sha256": "44ba777ba6b67201fb4c427bfc1120e386f024274433a3dabc4f2394c30735e5"
+    },
+    {
+      "path": "dist/client/assets/ai-paper/ai.svg",
+      "bytes": 2207,
+      "sha256": "c97d80296afe3fd620fe3edf7990512ca0f2e18a2e034561244f946370f1e815"
+    },
+    {
+      "path": "dist/client/assets/ai-paper/data.svg",
+      "bytes": 1394,
+      "sha256": "e3d161c371f75c9962363e2fe91f3c9581567c573826c56988704e348a9bc41d"
+    },
+    {
+      "path": "dist/client/assets/ai-paper/learning.svg",
+      "bytes": 2089,
+      "sha256": "188a828035dde6bd612358dacb3f86340168d74f8a89f4a7085ffc3698196794"
+    },
+    {
+      "path": "dist/client/assets/articles/habr-1050894.png",
+      "bytes": 845262,
+      "sha256": "3987a9e96c8b5629fde4f17b2bdea1b4cb51c9a9461acb5ca922d9a8b49c6507"
+    },
+    {
+      "path": "dist/client/assets/articles/habr-1053624.png",
+      "bytes": 212070,
+      "sha256": "726cfb179982a9aa47f0510dae2c90043773ca2c6c47c434d65f5a8e72cb030f"
+    },
+    {
+      "path": "dist/client/assets/articles/habr-1056500.png",
+      "bytes": 422283,
+      "sha256": "f286801751eafbb1820f79c0a3318315f9f4aded72aa667b2aff098556fed0d1"
+    },
+    {
+      "path": "dist/client/assets/articles/habr-1075172.png",
+      "bytes": 840449,
+      "sha256": "7c3ae309ed2dbdaa34c26866ea910f5ff2edbcb5fed15a3fa1ebfea9fd04b9a1"
+    },
+    {
+      "path": "dist/client/assets/articles/habr-1086492.png",
+      "bytes": 848172,
+      "sha256": "39980365599da8c31983d9ddb74a8ab576c73f312505e2e36b0690c721ec7cf2"
+    },
+    {
+      "path": "dist/client/assets/cyberchef-logo.svg",
+      "bytes": 46378,
+      "sha256": "2b580a3ea52ce1afa18949532de45cb5c1615dc244e40a7cba39220dc613be8c"
+    },
+    {
+      "path": "dist/client/assets/index-8fnp-u7i.css",
+      "bytes": 94295,
+      "sha256": "f7152a4b5018e9736ea2e335e8af9d5398d9ebe90401b201c3706267062e7697"
+    },
+    {
+      "path": "dist/client/assets/index-C8oVnNOt.js",
+      "bytes": 690876,
+      "sha256": "b0c3033d9575c93ea98c1960d374be99ad076bb275f6667db155f9fc335d4e56"
+    },
+    {
+      "path": "dist/client/assets/logo-tech-brandbook-light.svg",
+      "bytes": 4890,
+      "sha256": "8362fc31018049d7d30909d7262426041350f35addb531da93cbc08edaea64d4"
+    },
+    {
+      "path": "dist/client/assets/logo-tech-brandbook-mark.svg",
+      "bytes": 4835,
+      "sha256": "61616411d2511e887baa57d65459b38805d804257cefb61a9e1af013d45599ff"
+    },
+    {
+      "path": "dist/client/assets/logo-tech-brandbook-wordmark.svg",
+      "bytes": 4891,
+      "sha256": "23f6ea69dc74eeb2ec316df790a1f997f1f1fe8b9868ad796b94e5263a6d6649"
+    },
+    {
+      "path": "dist/client/assets/logo-tech-brandbook.svg",
+      "bytes": 4837,
+      "sha256": "33a4cdadc045f81e62b88c46de56e2edb30bcb13b01d5c73e9b19a7523a811c8"
+    },
+    {
+      "path": "dist/client/assets/logotech.svg",
+      "bytes": 1640,
+      "sha256": "eef150c1f42f84c4d2e0b8b88b0beb2e0f90272dc2eee2d543c176b669289150"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/apple.jpg",
+      "bytes": 5019,
+      "sha256": "fb62982e293d271e9c80a68baf0c80e67160ec4fecf9c52fc7d8e6c5293a7d4b"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/avocado.jpg",
+      "bytes": 4190,
+      "sha256": "73169cbc8038a7a85f6308ef7ff0de52c143edb28c128993a94726611ea5d487"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/banana.jpg",
+      "bytes": 4453,
+      "sha256": "e88dc9e71a85cbb98ec9c1e73d974ffa7e610dfcbc20637ea236d14581dfc88d"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/coconut.jpg",
+      "bytes": 5378,
+      "sha256": "14c806c2e2a7604d39b434208fc33bae6e07163c6a50aa0d96d8f04e03210ed9"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/lychee.jpg",
+      "bytes": 4269,
+      "sha256": "30e04f3baa1807050f6f8bd885241d16a44ff54e2db352a8c3480a17bec0bb77"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/mango.jpg",
+      "bytes": 4140,
+      "sha256": "fe4437c07ebcf5561ee8a65f2b35c3a357b8c5d9268c697e543da83ebb482285"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/pineapple.jpg",
+      "bytes": 4890,
+      "sha256": "daa9bab9c5b08ab528a5a2dbc3479d5a06fef9e64fa3bbe6e13b816f194d3d05"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/pomegranate.jpg",
+      "bytes": 5764,
+      "sha256": "41e774b61447029e39ed01ac9c6148b75a139a0c1eb3c47940d2a6705d47e764"
+    },
+    {
+      "path": "dist/client/assets/paper-fruits/raspberry.jpg",
+      "bytes": 5432,
+      "sha256": "99bd996883c54610cf35d4f5d1ebdea1f70479baa1f39f069312155da847cd2c"
+    },
+    {
+      "path": "dist/client/assets/photos/culture-event.png",
+      "bytes": 2035198,
+      "sha256": "eda00f8b3c4187c52418f6a33908ee853005f8d278c3626727a020a49be300af"
+    },
+    {
+      "path": "dist/client/assets/photos/culture-speaker.png",
+      "bytes": 1980190,
+      "sha256": "82ce78c47017e9211ddbad9a21a27b31ffdde881bb6b3185210b9d006a1dd8ab"
+    },
+    {
+      "path": "dist/client/assets/photos/culture-workshop.png",
+      "bytes": 2078100,
+      "sha256": "86511579907a23ad5791cee2c514d97db0f279101f5e2ed5296d8f60fd0921ac"
+    },
+    {
+      "path": "dist/client/assets/photos/hero-team.png",
+      "bytes": 1846071,
+      "sha256": "4350f5297164c0f21af9777e9e3dfbae43c89df4c1fabb0b81a0f03bf02f3f89"
+    },
+    {
+      "path": "dist/client/assets/photos/impact-analyst.png",
+      "bytes": 1674190,
+      "sha256": "3df3b1203a6c5c8f5049dc6e975e6ba2bb3a591de276c4099582b967e891dddc"
+    },
+    {
+      "path": "dist/client/assets/photos/impact-delivery.png",
+      "bytes": 1575151,
+      "sha256": "26c87ca5671ccf56f23ae4dbf1262e9cad9fc1929ae6b15d1e0f2d1f69b553d7"
+    },
+    {
+      "path": "dist/client/assets/react-three-fiber.esm-CY-AXTJg.js",
+      "bytes": 893301,
+      "sha256": "bc0ce01678e83c32e55f5d31e1ac9971b554c5d08d72fd0fc6d4285499084451"
+    },
+    {
+      "path": "dist/client/assets/reference/techvill-selected-concept.png",
+      "bytes": 1911469,
+      "sha256": "6219e305b02af0634521cb9e1ca7c8473958c1aeac15fc13905dd21bfef1cebc"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-analyst.jpg",
+      "bytes": 236612,
+      "sha256": "b7922be85606df5382dac9abe0e6a047bd86b63d8898b80dddcdcf29b2a5427c"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-build.jpg",
+      "bytes": 223602,
+      "sha256": "2bcc36829da07a225e44dfe16440069a5d98e6129f779dd5e967799468a7e262"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-delivery.jpg",
+      "bytes": 254561,
+      "sha256": "c4b993aff085e2c759930a3263d03529edcbed04b78b15ca49c65d847de0f939"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-event.jpg",
+      "bytes": 221919,
+      "sha256": "cde7ce007475876a5cb22dd3cb65cbb22e6f7c1c0523ef740c2b8754148a6b24"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-hero-white.jpg",
+      "bytes": 284339,
+      "sha256": "54dc0d28d8e88843a8b7da6061130a180e2bc3777500af4fa52f2c9adfa1d143"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-hero-white.png",
+      "bytes": 1801593,
+      "sha256": "ee821e21fa1ae1bc38cbb9a40286032aa52177f47e96b04bdb1695f27ed9c8b7"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-hero.jpg",
+      "bytes": 294293,
+      "sha256": "fbae63ead24f199dc887106bc2dd27d4e46d4520f4dc182fa0b6993ee310c503"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-speaker.jpg",
+      "bytes": 239706,
+      "sha256": "0dbee90626d018451be891e91a8f955f19d97fdafd42b8f754c318d94a9edab8"
+    },
+    {
+      "path": "dist/client/assets/rut/rut-workshop.jpg",
+      "bytes": 210024,
+      "sha256": "d35cfd9c5bef02ec3786a9499f998c2b362f8d6fabfc9dd3f713a0995a9c5a09"
+    },
+    {
+      "path": "dist/client/assets/services/courier.png",
+      "bytes": 823616,
+      "sha256": "5a7ec69ac0442ee8cb58c7b430390db00a88a1a8ba76bdc94c629b0b2796af52"
+    },
+    {
+      "path": "dist/client/assets/services/customer.png",
+      "bytes": 935549,
+      "sha256": "4c00db648c07db28e667fbc66f26d8b2e59458640a46c29be9e63aa67798482a"
+    },
+    {
+      "path": "dist/client/assets/services/partner.png",
+      "bytes": 217036,
+      "sha256": "25094700aa504d1e0ccd883e04e281a6d7b1cbbb8ac6ea499c4662723daf649f"
+    },
+    {
+      "path": "dist/client/assets/socials/README.md",
+      "bytes": 776,
+      "sha256": "4609248948ae7c3a69511949aed1e7d881f1fa0a315b8e719288c60b0c81a667"
+    },
+    {
+      "path": "dist/client/assets/socials/habr.svg",
+      "bytes": 46262,
+      "sha256": "b009b6f7ea6d132d1ba272af4f19072a2ce5b4ee25db3d175b8a05fff4cbb3ed"
+    },
+    {
+      "path": "dist/client/assets/socials/logo-icon-dark.svg",
+      "bytes": 88231,
+      "sha256": "ff86e50cd55adc022d5f64436d5e3c2663068dab12fc254b75bc797a65288ba5"
+    },
+    {
+      "path": "dist/client/assets/stories/README.md",
+      "bytes": 643,
+      "sha256": "4030fdb63e6b0a6cd999f146299569aa5ff81d753e4ff6a0a466e4a17c73d5fa"
+    },
+    {
+      "path": "dist/client/assets/stories/care-person.webp",
+      "bytes": 91908,
+      "sha256": "84788c4db903cce4f61d49561c64fcc598dad9934f9073c5b27837dd18006933"
+    },
+    {
+      "path": "dist/client/assets/stories/mind-person.webp",
+      "bytes": 126830,
+      "sha256": "f484165818bf29a62dfdb2af30d1eb96f3291f63cca5fcb28884f4fe9c7391a5"
+    },
+    {
+      "path": "dist/client/assets/team-life/altai.jpg",
+      "bytes": 647417,
+      "sha256": "0d6ebd1800a1d8cc3d6b0f95eb12f7535a036bfe886960c332b01046d93ccd69"
+    },
+    {
+      "path": "dist/client/assets/team-life/run-it-2026.jpg",
+      "bytes": 806023,
+      "sha256": "b3cf5001ae2902b19570ec19e1724cdc33f53671b714e429300a10ef09b9aee0"
+    },
+    {
+      "path": "dist/client/assets/team-life/talk.jpg",
+      "bytes": 58712,
+      "sha256": "e9fa64655c2c17220c4de3569a810a3c833317f2eb5720756311c48b1d6851e1"
+    },
+    {
+      "path": "dist/client/assets/team-life/team-event.jpg",
+      "bytes": 160023,
+      "sha256": "efa4aa887959f0a56cb0cf5b9987c1d1e126a2c55b0e0db6063fef97f8604519"
+    },
+    {
+      "path": "dist/client/assets/team-life/team-run-it.jpg",
+      "bytes": 58215,
+      "sha256": "88ce28bbac4c03171c86b41dc14284c319395077605ca2264e42ec5527288be2"
+    },
+    {
+      "path": "dist/client/assets/team-life/team-run.jpg",
+      "bytes": 222252,
+      "sha256": "1b91af52a2de99ac64c163935adc964ee796732fb4b579e7941d8306faff0bae"
+    },
+    {
+      "path": "dist/client/assets/team-life/work-together.jpg",
+      "bytes": 408156,
+      "sha256": "58c99f6f856891df9db53871cb99d0478a951fd241ba86bdd169ae4355f86a7f"
+    },
+    {
+      "path": "dist/client/index.html",
+      "bytes": 774,
+      "sha256": "9a15f1954344d3cefb5aa0c3d25d7698add4d6565471cf899b8b1beceb5a0f74"
+    },
+    {
+      "path": "dist/server/index.js",
+      "bytes": 959,
+      "sha256": "b2392c00b4d530ecb03de594d5cae1a9f296e05dafa43419dc25c6bc959c0f44"
+    },
+    {
+      "path": "hero-review-20261007.png",
+      "bytes": 72298,
+      "sha256": "9a8b1d29abf6a65479a72b2929e186f47f0fac2108c7ac98b9f8d500d075f1ed"
+    },
+    {
+      "path": "index.html",
+      "bytes": 676,
+      "sha256": "7bba6bf3aeada234a35ce2491a62301db4e8a8e2062d7caf8aa9c2dba6be506c"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 97908,
+      "sha256": "8336a1fa0b0f3de3d441ecbf3e0c176f9ea1b5038747899faeeeffe7ad89d4fd"
+    },
+    {
+      "path": "package.json",
+      "bytes": 686,
+      "sha256": "ecb55bcd3aa01b77a5e54ce0a60928bd78704264c7d9400a6705580b2c648b3e"
+    },
+    {
+      "path": "public/_headers",
+      "bytes": 37,
+      "sha256": "81b7e47e630266ed43d96495e2bf8f8938ff5bf9bc30098b3fa1d388eb908fb3"
+    },
+    {
+      "path": "public/assets/ai-paper/ai.svg",
+      "bytes": 2207,
+      "sha256": "c97d80296afe3fd620fe3edf7990512ca0f2e18a2e034561244f946370f1e815"
+    },
+    {
+      "path": "public/assets/ai-paper/data.svg",
+      "bytes": 1394,
+      "sha256": "e3d161c371f75c9962363e2fe91f3c9581567c573826c56988704e348a9bc41d"
+    },
+    {
+      "path": "public/assets/ai-paper/learning.svg",
+      "bytes": 2089,
+      "sha256": "188a828035dde6bd612358dacb3f86340168d74f8a89f4a7085ffc3698196794"
+    },
+    {
+      "path": "public/assets/articles/habr-1050894.png",
+      "bytes": 845262,
+      "sha256": "3987a9e96c8b5629fde4f17b2bdea1b4cb51c9a9461acb5ca922d9a8b49c6507"
+    },
+    {
+      "path": "public/assets/articles/habr-1053624.png",
+      "bytes": 212070,
+      "sha256": "726cfb179982a9aa47f0510dae2c90043773ca2c6c47c434d65f5a8e72cb030f"
+    },
+    {
+      "path": "public/assets/articles/habr-1056500.png",
+      "bytes": 422283,
+      "sha256": "f286801751eafbb1820f79c0a3318315f9f4aded72aa667b2aff098556fed0d1"
+    },
+    {
+      "path": "public/assets/articles/habr-1075172.png",
+      "bytes": 840449,
+      "sha256": "7c3ae309ed2dbdaa34c26866ea910f5ff2edbcb5fed15a3fa1ebfea9fd04b9a1"
+    },
+    {
+      "path": "public/assets/articles/habr-1086492.png",
+      "bytes": 848172,
+      "sha256": "39980365599da8c31983d9ddb74a8ab576c73f312505e2e36b0690c721ec7cf2"
+    },
+    {
+      "path": "public/assets/cyberchef-logo.svg",
+      "bytes": 46378,
+      "sha256": "2b580a3ea52ce1afa18949532de45cb5c1615dc244e40a7cba39220dc613be8c"
+    },
+    {
+      "path": "public/assets/logo-tech-brandbook-light.svg",
+      "bytes": 4890,
+      "sha256": "8362fc31018049d7d30909d7262426041350f35addb531da93cbc08edaea64d4"
+    },
+    {
+      "path": "public/assets/logo-tech-brandbook-mark.svg",
+      "bytes": 4835,
+      "sha256": "61616411d2511e887baa57d65459b38805d804257cefb61a9e1af013d45599ff"
+    },
+    {
+      "path": "public/assets/logo-tech-brandbook-wordmark.svg",
+      "bytes": 4891,
+      "sha256": "23f6ea69dc74eeb2ec316df790a1f997f1f1fe8b9868ad796b94e5263a6d6649"
+    },
+    {
+      "path": "public/assets/logo-tech-brandbook.svg",
+      "bytes": 4837,
+      "sha256": "33a4cdadc045f81e62b88c46de56e2edb30bcb13b01d5c73e9b19a7523a811c8"
+    },
+    {
+      "path": "public/assets/logotech.svg",
+      "bytes": 1640,
+      "sha256": "eef150c1f42f84c4d2e0b8b88b0beb2e0f90272dc2eee2d543c176b669289150"
+    },
+    {
+      "path": "public/assets/paper-fruits/apple.jpg",
+      "bytes": 5019,
+      "sha256": "fb62982e293d271e9c80a68baf0c80e67160ec4fecf9c52fc7d8e6c5293a7d4b"
+    },
+    {
+      "path": "public/assets/paper-fruits/avocado.jpg",
+      "bytes": 4190,
+      "sha256": "73169cbc8038a7a85f6308ef7ff0de52c143edb28c128993a94726611ea5d487"
+    },
+    {
+      "path": "public/assets/paper-fruits/banana.jpg",
+      "bytes": 4453,
+      "sha256": "e88dc9e71a85cbb98ec9c1e73d974ffa7e610dfcbc20637ea236d14581dfc88d"
+    },
+    {
+      "path": "public/assets/paper-fruits/coconut.jpg",
+      "bytes": 5378,
+      "sha256": "14c806c2e2a7604d39b434208fc33bae6e07163c6a50aa0d96d8f04e03210ed9"
+    },
+    {
+      "path": "public/assets/paper-fruits/lychee.jpg",
+      "bytes": 4269,
+      "sha256": "30e04f3baa1807050f6f8bd885241d16a44ff54e2db352a8c3480a17bec0bb77"
+    },
+    {
+      "path": "public/assets/paper-fruits/mango.jpg",
+      "bytes": 4140,
+      "sha256": "fe4437c07ebcf5561ee8a65f2b35c3a357b8c5d9268c697e543da83ebb482285"
+    },
+    {
+      "path": "public/assets/paper-fruits/pineapple.jpg",
+      "bytes": 4890,
+      "sha256": "daa9bab9c5b08ab528a5a2dbc3479d5a06fef9e64fa3bbe6e13b816f194d3d05"
+    },
+    {
+      "path": "public/assets/paper-fruits/pomegranate.jpg",
+      "bytes": 5764,
+      "sha256": "41e774b61447029e39ed01ac9c6148b75a139a0c1eb3c47940d2a6705d47e764"
+    },
+    {
+      "path": "public/assets/paper-fruits/raspberry.jpg",
+      "bytes": 5432,
+      "sha256": "99bd996883c54610cf35d4f5d1ebdea1f70479baa1f39f069312155da847cd2c"
+    },
+    {
+      "path": "public/assets/photos/culture-event.png",
+      "bytes": 2035198,
+      "sha256": "eda00f8b3c4187c52418f6a33908ee853005f8d278c3626727a020a49be300af"
+    },
+    {
+      "path": "public/assets/photos/culture-speaker.png",
+      "bytes": 1980190,
+      "sha256": "82ce78c47017e9211ddbad9a21a27b31ffdde881bb6b3185210b9d006a1dd8ab"
+    },
+    {
+      "path": "public/assets/photos/culture-workshop.png",
+      "bytes": 2078100,
+      "sha256": "86511579907a23ad5791cee2c514d97db0f279101f5e2ed5296d8f60fd0921ac"
+    },
+    {
+      "path": "public/assets/photos/hero-team.png",
+      "bytes": 1846071,
+      "sha256": "4350f5297164c0f21af9777e9e3dfbae43c89df4c1fabb0b81a0f03bf02f3f89"
+    },
+    {
+      "path": "public/assets/photos/impact-analyst.png",
+      "bytes": 1674190,
+      "sha256": "3df3b1203a6c5c8f5049dc6e975e6ba2bb3a591de276c4099582b967e891dddc"
+    },
+    {
+      "path": "public/assets/photos/impact-delivery.png",
+      "bytes": 1575151,
+      "sha256": "26c87ca5671ccf56f23ae4dbf1262e9cad9fc1929ae6b15d1e0f2d1f69b553d7"
+    },
+    {
+      "path": "public/assets/reference/techvill-selected-concept.png",
+      "bytes": 1911469,
+      "sha256": "6219e305b02af0634521cb9e1ca7c8473958c1aeac15fc13905dd21bfef1cebc"
+    },
+    {
+      "path": "public/assets/rut/rut-analyst.jpg",
+      "bytes": 236612,
+      "sha256": "b7922be85606df5382dac9abe0e6a047bd86b63d8898b80dddcdcf29b2a5427c"
+    },
+    {
+      "path": "public/assets/rut/rut-build.jpg",
+      "bytes": 223602,
+      "sha256": "2bcc36829da07a225e44dfe16440069a5d98e6129f779dd5e967799468a7e262"
+    },
+    {
+      "path": "public/assets/rut/rut-delivery.jpg",
+      "bytes": 254561,
+      "sha256": "c4b993aff085e2c759930a3263d03529edcbed04b78b15ca49c65d847de0f939"
+    },
+    {
+      "path": "public/assets/rut/rut-event.jpg",
+      "bytes": 221919,
+      "sha256": "cde7ce007475876a5cb22dd3cb65cbb22e6f7c1c0523ef740c2b8754148a6b24"
+    },
+    {
+      "path": "public/assets/rut/rut-hero-white.jpg",
+      "bytes": 284339,
+      "sha256": "54dc0d28d8e88843a8b7da6061130a180e2bc3777500af4fa52f2c9adfa1d143"
+    },
+    {
+      "path": "public/assets/rut/rut-hero-white.png",
+      "bytes": 1801593,
+      "sha256": "ee821e21fa1ae1bc38cbb9a40286032aa52177f47e96b04bdb1695f27ed9c8b7"
+    },
+    {
+      "path": "public/assets/rut/rut-hero.jpg",
+      "bytes": 294293,
+      "sha256": "fbae63ead24f199dc887106bc2dd27d4e46d4520f4dc182fa0b6993ee310c503"
+    },
+    {
+      "path": "public/assets/rut/rut-speaker.jpg",
+      "bytes": 239706,
+      "sha256": "0dbee90626d018451be891e91a8f955f19d97fdafd42b8f754c318d94a9edab8"
+    },
+    {
+      "path": "public/assets/rut/rut-workshop.jpg",
+      "bytes": 210024,
+      "sha256": "d35cfd9c5bef02ec3786a9499f998c2b362f8d6fabfc9dd3f713a0995a9c5a09"
+    },
+    {
+      "path": "public/assets/services/courier.png",
+      "bytes": 823616,
+      "sha256": "5a7ec69ac0442ee8cb58c7b430390db00a88a1a8ba76bdc94c629b0b2796af52"
+    },
+    {
+      "path": "public/assets/services/customer.png",
+      "bytes": 935549,
+      "sha256": "4c00db648c07db28e667fbc66f26d8b2e59458640a46c29be9e63aa67798482a"
+    },
+    {
+      "path": "public/assets/services/partner.png",
+      "bytes": 217036,
+      "sha256": "25094700aa504d1e0ccd883e04e281a6d7b1cbbb8ac6ea499c4662723daf649f"
+    },
+    {
+      "path": "public/assets/socials/README.md",
+      "bytes": 776,
+      "sha256": "4609248948ae7c3a69511949aed1e7d881f1fa0a315b8e719288c60b0c81a667"
+    },
+    {
+      "path": "public/assets/socials/habr.svg",
+      "bytes": 46262,
+      "sha256": "b009b6f7ea6d132d1ba272af4f19072a2ce5b4ee25db3d175b8a05fff4cbb3ed"
+    },
+    {
+      "path": "public/assets/socials/logo-icon-dark.svg",
+      "bytes": 88231,
+      "sha256": "ff86e50cd55adc022d5f64436d5e3c2663068dab12fc254b75bc797a65288ba5"
+    },
+    {
+      "path": "public/assets/stories/README.md",
+      "bytes": 643,
+      "sha256": "4030fdb63e6b0a6cd999f146299569aa5ff81d753e4ff6a0a466e4a17c73d5fa"
+    },
+    {
+      "path": "public/assets/stories/care-person.webp",
+      "bytes": 91908,
+      "sha256": "84788c4db903cce4f61d49561c64fcc598dad9934f9073c5b27837dd18006933"
+    },
+    {
+      "path": "public/assets/stories/mind-person.webp",
+      "bytes": 126830,
+      "sha256": "f484165818bf29a62dfdb2af30d1eb96f3291f63cca5fcb28884f4fe9c7391a5"
+    },
+    {
+      "path": "public/assets/team-life/altai.jpg",
+      "bytes": 647417,
+      "sha256": "0d6ebd1800a1d8cc3d6b0f95eb12f7535a036bfe886960c332b01046d93ccd69"
+    },
+    {
+      "path": "public/assets/team-life/run-it-2026.jpg",
+      "bytes": 806023,
+      "sha256": "b3cf5001ae2902b19570ec19e1724cdc33f53671b714e429300a10ef09b9aee0"
+    },
+    {
+      "path": "public/assets/team-life/talk.jpg",
+      "bytes": 58712,
+      "sha256": "e9fa64655c2c17220c4de3569a810a3c833317f2eb5720756311c48b1d6851e1"
+    },
+    {
+      "path": "public/assets/team-life/team-event.jpg",
+      "bytes": 160023,
+      "sha256": "efa4aa887959f0a56cb0cf5b9987c1d1e126a2c55b0e0db6063fef97f8604519"
+    },
+    {
+      "path": "public/assets/team-life/team-run-it.jpg",
+      "bytes": 58215,
+      "sha256": "88ce28bbac4c03171c86b41dc14284c319395077605ca2264e42ec5527288be2"
+    },
+    {
+      "path": "public/assets/team-life/team-run.jpg",
+      "bytes": 222252,
+      "sha256": "1b91af52a2de99ac64c163935adc964ee796732fb4b579e7941d8306faff0bae"
+    },
+    {
+      "path": "public/assets/team-life/work-together.jpg",
+      "bytes": 408156,
+      "sha256": "58c99f6f856891df9db53871cb99d0478a951fd241ba86bdd169ae4355f86a7f"
+    },
+    {
+      "path": "qa/2026-10-21-header-navigation/published-menu.png",
+      "bytes": 66128,
+      "sha256": "62acc37b74dffbf95d0a77e4d3294d58db705cfe0af660660bfa67d473b1b9f2"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/after-keyboard-turn.png",
+      "bytes": 106048,
+      "sha256": "eae41677b9dbb046c34cf1a4a5ef69eb08118438429ca2f24fabfadb5d39d558"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/after-mix.png",
+      "bytes": 87863,
+      "sha256": "1cb754a0dffaa93aedc515b63f25a6f3d22d3ebb78a2f1d1634a4e14b4832fc4"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/after-people.png",
+      "bytes": 94763,
+      "sha256": "9ec12ced4d104410473408f915d56852a2409469313139041971ff602b49f9f2"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/before-mix.png",
+      "bytes": 82791,
+      "sha256": "debff02a77dc16558aa48d2bbd93df6a3ea677b637512785eb8f2af674399a99"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/before-people.png",
+      "bytes": 91356,
+      "sha256": "b77c64566472d3e6374387ed9d5416834f144d815256e599637b1d7501ddf18c"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/comparison-detail.png",
+      "bytes": 316670,
+      "sha256": "3fe2fd5e0458ef3c87acaadfc8daa1e44f3d63be21f59255c5e66abf01f00a8e"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/comparison-mix.png",
+      "bytes": 153575,
+      "sha256": "cb11b16aa797354fb6bbe2899a5fd4fcb145a8ea8a3cd12a41dfcc683b512136"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/comparison-people.png",
+      "bytes": 1072824,
+      "sha256": "393a892aab733103362dafd5b342fa54359342fbf129cb8a0db07f075404bf21"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/hero.png",
+      "bytes": 71353,
+      "sha256": "314081299eb4e0abdaec20c5b04652d8f2bbb8487d68811542446dcfee3ad4c5"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/iteration-1-people.png",
+      "bytes": 94329,
+      "sha256": "221e9dfa4eb511ef57eb1a90fd3ca850f16251e87a10aec5504e8753507d230f"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/iteration-2-people.png",
+      "bytes": 96477,
+      "sha256": "7d851aa36926bfcce55aaef2937c8cc2f31cc24e6946e4c4d95c298987e15c22"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/mobile-apple.png",
+      "bytes": 47454,
+      "sha256": "17316bc9f46b744bbf87dc0ebe4685f3958a81af8a54bf3b8d2e2d509159c92c"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/mobile-coconut.png",
+      "bytes": 48717,
+      "sha256": "29d46dfd0643abf58402a825006090ba25f0930e09312b5127fc3769ecacdda6"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/published-people.png",
+      "bytes": 94518,
+      "sha256": "4fbe2128dc23c90829ee48e1e91698a07700734637165d57e4244fce5a671adb"
+    },
+    {
+      "path": "qa/2026-10-22-fruit-shapes/tablet-900.png",
+      "bytes": 98219,
+      "sha256": "7857d43d97265a48f02b9a915f96207f43f704963f7fb01192b39290d7e92e2c"
+    },
+    {
+      "path": "qa/2026-10-22-remove-about/published-menu.png",
+      "bytes": 69792,
+      "sha256": "17cbde8eeb7fc0dcd3adb736e83a431fc02a9c208eecca5a739501062466022e"
+    },
+    {
+      "path": "qa/2026-10-22-social-hover/hover-local.png",
+      "bytes": 66780,
+      "sha256": "82f89f92700893b406c1dc4a319363b2d918a56b8ccbd25507125c9f0dd57211"
+    },
+    {
+      "path": "qa/2026-10-22-social-hover/hover-published.png",
+      "bytes": 66854,
+      "sha256": "0d5d06728cd63bb20ded378474b67a59f5bab0de85d077b5d8f087f4baa4bd95"
+    },
+    {
+      "path": "qa/2026-10-22-social-hover/review.md",
+      "bytes": 2219,
+      "sha256": "751611a1704b2de48a0dec55b5079039326056760a45a8c57605ca2b7ccaf4e7"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/desktop-1129.png",
+      "bytes": 98415,
+      "sha256": "b785aa233d6d43f1d72884bfcd3e2f777768d648d792c3f2ec839e0e11e183ab"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/desktop-1440.png",
+      "bytes": 132323,
+      "sha256": "bfc32cb5b1c5f11a88c424178b3342ced46687571cbae00488e81d20416bea4c"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/hover-1129.png",
+      "bytes": 108305,
+      "sha256": "163ba2342ec765ebf81a3bf82dba419580054dc25a41fd34dd04341c7af1a206"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/hover-1440.png",
+      "bytes": 133360,
+      "sha256": "865e74c059abba8777fadabb40f28e84cd95c3efe4121b262111348c44d936f5"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/keyboard-focus.png",
+      "bytes": 99655,
+      "sha256": "e43cbcb212932a983dd24a85d37bf50e3ea88a6d6a3d6bd40b9d2f61f509a4bb"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/mobile-320.png",
+      "bytes": 41911,
+      "sha256": "084ff8e6c70b58c3aa0ba1eaeb6153f0e130bde7c8b1a802c2bf15bfdc538c26"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/mobile-390.png",
+      "bytes": 45665,
+      "sha256": "f1b19bc205a6b60c789879c68b3fce3dcb2e94e682b9def13fe15cc37767cd0c"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/publication.json",
+      "bytes": 298,
+      "sha256": "e8984a905cd9612b88ac34ce152682300081d0966a2c2729412dfbaf7cb0be8b"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/published-desktop.png",
+      "bytes": 99678,
+      "sha256": "65eb6e8222d1c00cb7726c06882f26e7f9934754c0861f7537d98eca706e5dc9"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/published-hover.png",
+      "bytes": 100405,
+      "sha256": "a46d2a79387da445f7adfa683477f3839f3da095930cb7e92799557b84bc5ab4"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/published-mobile-320.png",
+      "bytes": 41701,
+      "sha256": "cf6bf5bdf1c78facc87a84d6ef1070de10c7802b75b6e64f03b7123bdca53148"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/tablet-760.png",
+      "bytes": 84281,
+      "sha256": "79aad7e3f31f7cc718bc99d349650f4035f27aac0e5ae5ca42ae4add9436fe78"
+    },
+    {
+      "path": "qa/2026-10-28-story-portraits/tablet-900.png",
+      "bytes": 105990,
+      "sha256": "1dfb51eb9a45b268541aac4bdd4fa30559013e76e1766699d6d7bcc14ebe6eb1"
+    },
+    {
+      "path": "qa/2026-10-28-typography/ai-1129.png",
+      "bytes": 45960,
+      "sha256": "8ceaf129d1080f4dfb7bc38f22bebc425752a177cb4bb988949f8877d2102cb3"
+    },
+    {
+      "path": "qa/2026-10-28-typography/ai-320-final.png",
+      "bytes": 25063,
+      "sha256": "c5839a6762476a8760caeca0bdd58b395be90e32261edc8e46fe79fb620cf9a2"
+    },
+    {
+      "path": "qa/2026-10-28-typography/ai-320.png",
+      "bytes": 27812,
+      "sha256": "756be4aea2755f13cbcca9bf334176bf14a199ff9843715b2319026c8da56dc7"
+    },
+    {
+      "path": "qa/2026-10-28-typography/ai-390.png",
+      "bytes": 25998,
+      "sha256": "9c2daa72d1ea07eac3806416fd0ef399e07a09eb30fd7abc75ff35f140febe6a"
+    },
+    {
+      "path": "qa/2026-10-28-typography/ai-900.png",
+      "bytes": 36877,
+      "sha256": "8f180c29435ebcf38516ec46a06249c5090ae99f9b80d8c2497bca802aa4ee2c"
+    },
+    {
+      "path": "qa/2026-10-28-typography/before-technology-320.png",
+      "bytes": 36442,
+      "sha256": "0a76738d7d5e86f5e9dc93cb8cbfbb3608d7e8b7f4ab4d8177af7f9878058ab6"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-1129.png",
+      "bytes": 102700,
+      "sha256": "05bec382f63e420f12f8be8317d877804320848db57834732e185333de41cada"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-320.png",
+      "bytes": 30728,
+      "sha256": "c0d789e0b7c18632fafe53b5a7d9f589f0616841ee32c2d77e9634c36262aef1"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-900.png",
+      "bytes": 77486,
+      "sha256": "9648d7c5792115b04b23fbe53246c7bd071dc9433cd84fe31ed744b8e31287fb"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-altai-1129.png",
+      "bytes": 116980,
+      "sha256": "cd6497fe10a1bb6f9b0982ed0ccbb2c634ede1228baff5ae8a6312bd58dd9478"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-altai-320-final.png",
+      "bytes": 40352,
+      "sha256": "053adb4117c48c8efb232894d513ddadfec7e4b8868e030a7dfc5c393fb1d932"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-altai-320.png",
+      "bytes": 40352,
+      "sha256": "053adb4117c48c8efb232894d513ddadfec7e4b8868e030a7dfc5c393fb1d932"
+    },
+    {
+      "path": "qa/2026-10-28-typography/blog-altai-900.png",
+      "bytes": 97775,
+      "sha256": "3742be19c122b54fc59bd396cfaf62d5cb597ba00c7e2066363a19fe95d3c856"
+    },
+    {
+      "path": "qa/2026-10-28-typography/dialog-320.png",
+      "bytes": 29003,
+      "sha256": "639aa52395829657985df08dd429184a5fe90c79572db0fab4d3a0dd89af16be"
+    },
+    {
+      "path": "qa/2026-10-28-typography/home-1129.png",
+      "bytes": 48736,
+      "sha256": "3481e04529ac1af754381ac8167fd846d1ac9b27ea35641c4f118ab18014b007"
+    },
+    {
+      "path": "qa/2026-10-28-typography/home-320.png",
+      "bytes": 76368,
+      "sha256": "20c38adce4a24a76b3b66efda4dfa0022bdd2f2e4712d7894878ed3c700c8785"
+    },
+    {
+      "path": "qa/2026-10-28-typography/home-900.png",
+      "bytes": 35958,
+      "sha256": "85749a5711e157a255aa1e37ade02455abfa4749061571130651b65d0989a821"
+    },
+    {
+      "path": "qa/2026-10-28-typography/layout-checks.json",
+      "bytes": 7638,
+      "sha256": "f9227ad2cd025e84b6bbf0c60ffdde7ce8ae8c9c3d5ddae18f89160b2c5ccc31"
+    },
+    {
+      "path": "qa/2026-10-28-typography/pentest-1129.png",
+      "bytes": 68314,
+      "sha256": "5c35477bccb51f3d437c90dec5e7fc8d43d17e99d43c98814d11dbf4691ee518"
+    },
+    {
+      "path": "qa/2026-10-28-typography/pentest-320.png",
+      "bytes": 40686,
+      "sha256": "f2e1c5f4b6a8d63c1c4b55ca31674a94ff4f4f2e32f8a1e49a38ebf7ba73258e"
+    },
+    {
+      "path": "qa/2026-10-28-typography/pentest-900.png",
+      "bytes": 64871,
+      "sha256": "af4f2e711f0699343123d5391f83a39637d4778f2705e7e3fd4f4ea471e41064"
+    },
+    {
+      "path": "qa/2026-10-28-typography/published-values-1129.png",
+      "bytes": 69494,
+      "sha256": "32ad416f81f9753666139e9bb623ab9bb9d5153696d1aaf9a3e8695b0554e986"
+    },
+    {
+      "path": "qa/2026-10-28-typography/search-hyphen-320.png",
+      "bytes": 38260,
+      "sha256": "6bf470cdcc3549e07fd1acdec3b0a4bfbff4ce653bcde555de17f335236b9966"
+    },
+    {
+      "path": "qa/2026-10-28-typography/service-value-open-320.png",
+      "bytes": 32893,
+      "sha256": "38d9c58feb5fe51f98f03d4079d214e97fe6c685d080d452f14dd72db046f97e"
+    },
+    {
+      "path": "qa/2026-10-28-typography/services-1129.png",
+      "bytes": 58738,
+      "sha256": "aa109c3816b23b42422564f425c646eb6a611584371d9d293421e40a39de2c6c"
+    },
+    {
+      "path": "qa/2026-10-28-typography/services-320.png",
+      "bytes": 33932,
+      "sha256": "7b8e7df32d80c034645b57e54006ffeed6b4399af025469e05c3cc89f30be1bf"
+    },
+    {
+      "path": "qa/2026-10-28-typography/services-390.png",
+      "bytes": 35647,
+      "sha256": "e1c87c22a6bfeb29c8e70ed18f626854997658ccf36af2d5408c4989667d3eae"
+    },
+    {
+      "path": "qa/2026-10-28-typography/services-900.png",
+      "bytes": 57371,
+      "sha256": "0d4fc695bf0aa866ba3705399a547c2f0baf2d707123e7881f1d3aa192702a87"
+    },
+    {
+      "path": "qa/2026-10-28-typography/services-values-1129-final.png",
+      "bytes": 69494,
+      "sha256": "32ad416f81f9753666139e9bb623ab9bb9d5153696d1aaf9a3e8695b0554e986"
+    },
+    {
+      "path": "qa/2026-10-28-typography/technology-320-final.png",
+      "bytes": 26681,
+      "sha256": "1168f4e6807756e00eac4e87eba561d16454ecd4bb45abe84279348ad8c38229"
+    },
+    {
+      "path": "qa/2026-10-28-typography/technology-320.png",
+      "bytes": 27409,
+      "sha256": "e775d64974ae0d2a5aa647d0ee6e9dfa44ac6dbddd47e7cc598826bd2e2c2733"
+    },
+    {
+      "path": "qa/2026-10-28-typography/technology-390.png",
+      "bytes": 31537,
+      "sha256": "76725847841718757add71fa6fbb8e2593deba16ef284150a2daa40b0601b869"
+    },
+    {
+      "path": "qa/2026-10-28-typography/tooltip-320.png",
+      "bytes": 24335,
+      "sha256": "2021cd378fac609746dfafe4a535bf0a8e48c946413211e0dd757989b56ee494"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-1-1129.png",
+      "bytes": 54067,
+      "sha256": "84e3a5a397dba74321a60095525671f43d8a38b15b5ea5d791bd613004b5d611"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-1-320-final.png",
+      "bytes": 33507,
+      "sha256": "f4ffd2421164f5a549fc135e49901f57868db06da53ad0000668b3e7cf66e87c"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-1-320.png",
+      "bytes": 31116,
+      "sha256": "8e639a1ed228d3dec4dbb5360a9a5ace7e9553abf7211eb73bcfc5a081d2e5fa"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-1-900.png",
+      "bytes": 49076,
+      "sha256": "0923d7fa2951faf6c7fee86de4d8162a5aa4f11110b7873745a27a10c76895c4"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-1129.png",
+      "bytes": 54065,
+      "sha256": "dc21677c84fb4f6879acbcb5bc1c77982afdfc0369154105f826fe34ea2c7ba7"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-2-320.png",
+      "bytes": 30075,
+      "sha256": "d6c7f754ea12bd9d1d57f85021ec405ab4108fe71eb27f0c037bfaa0ba4b5ce4"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-3-320.png",
+      "bytes": 29844,
+      "sha256": "543475fa5601debb08f1980413d6f3fb753263cc1abf56cb44909b692bc681fd"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-320-final.png",
+      "bytes": 30607,
+      "sha256": "bbcbe41385a869bb963dd14e62417ad2f48a9a284f330dc23254e90b496fe992"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-320.png",
+      "bytes": 30607,
+      "sha256": "bbcbe41385a869bb963dd14e62417ad2f48a9a284f330dc23254e90b496fe992"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-4-320.png",
+      "bytes": 31685,
+      "sha256": "151f6fb31044d3336c06a330d54e6c01bde04ffd3cdc3b709958df5be3c48f51"
+    },
+    {
+      "path": "qa/2026-10-28-typography/vacancies-900.png",
+      "bytes": 44404,
+      "sha256": "8af43272c73968cfac1a6860b17f9a54274c31d3b52a18f1044a8ad73dba258b"
+    },
+    {
+      "path": "qa/ai-heading-2026-10-13/before.png",
+      "bytes": 81025,
+      "sha256": "209a28480f45ff53f2dd5972413f3761674c489934164fb75c875ea49a7061c6"
+    },
+    {
+      "path": "qa/ai-heading-2026-10-13/blog-desktop.png",
+      "bytes": 48309,
+      "sha256": "b2317839415906e0850242a92ab5e840dc47b316f1b8f883f8df139f24a38cf5"
+    },
+    {
+      "path": "qa/ai-heading-2026-10-13/directions-desktop.png",
+      "bytes": 65375,
+      "sha256": "08100b5aa6152f4c0f073e1d9efbd86950064d0972ae068f334e0698e09de063"
+    },
+    {
+      "path": "qa/ai-heading-2026-10-13/directions-mobile.png",
+      "bytes": 33413,
+      "sha256": "e919f7965da6681d80824797620608f8550fb6054764021e46cae166da33fae8"
+    },
+    {
+      "path": "qa/avocado-hint-2026-10-16/desktop.png",
+      "bytes": 65107,
+      "sha256": "0ffa3afa2cfc94c1ff77b95c7a756621484e38d7eae152614376178acdadba04"
+    },
+    {
+      "path": "qa/avocado-hint-2026-10-16/mobile.png",
+      "bytes": 43990,
+      "sha256": "6b2b6fef27023b4813cad6d2a5ad8a818ccfab33ed49e4f8ed92e038fc10f2a4"
+    },
+    {
+      "path": "qa/avocado-hint-2026-10-16/published.png",
+      "bytes": 63829,
+      "sha256": "dfc258978af31bf65a505d26f102017c951ebb2bcc1c49a14b4e48f6cd5bdfc0"
+    },
+    {
+      "path": "qa/brand-2026-10-13/desktop-1280.png",
+      "bytes": 77005,
+      "sha256": "c7fbe238b59eac9e9e96b056e967e46418e5b3cd2b84c91d029aecb21148abb0"
+    },
+    {
+      "path": "qa/brand-2026-10-13/desktop.png",
+      "bytes": 73108,
+      "sha256": "046ec5dcf60deb5e0dfdb5fa3afb8277a8b1abee63789a9ca6b64f3f2a6dfe05"
+    },
+    {
+      "path": "qa/brand-2026-10-13/footer.png",
+      "bytes": 73276,
+      "sha256": "b01f99ad598b806eaa1d78af969ff1d2638bb7636b6d9b26fc48e89b62025e9f"
+    },
+    {
+      "path": "qa/brand-2026-10-13/header.png",
+      "bytes": 7693,
+      "sha256": "d7ab783ce5dc41d201e9f49632a386e45dcbbf4932c6d8c0fa69901ca1729a64"
+    },
+    {
+      "path": "qa/brand-2026-10-13/mobile-320.png",
+      "bytes": 34573,
+      "sha256": "cdeb626c761d41587f3c01123753a3ca27a44ba21f670bcf0c7374810bc08582"
+    },
+    {
+      "path": "qa/brand-2026-10-13/source-comparison.png",
+      "bytes": 32692,
+      "sha256": "d1570421ed49a1637ab1d7fc0b89a4e3bafe58b5c37b31efb2a474c6f578ac91"
+    },
+    {
+      "path": "qa/brand-balance-2026-10-13/desktop.png",
+      "bytes": 69093,
+      "sha256": "e7f0c7a474c8569774f4bb72fb8ab405c8b67273254714284035482ffcfb775e"
+    },
+    {
+      "path": "qa/brand-balance-2026-10-13/footer.png",
+      "bytes": 71207,
+      "sha256": "28f8bff95282528eddd40bc1a3e0f159c62ac9a007b698581cacd6c7d584c7a8"
+    },
+    {
+      "path": "qa/brand-balance-2026-10-13/mobile-320.png",
+      "bytes": 33206,
+      "sha256": "88fdc31015bf62ce30ccc9aa6fdc8795e65a69ce11357dbefa30b74fe359a73d"
+    },
+    {
+      "path": "qa/brand-balance-2026-10-13/wide-1920.png",
+      "bytes": 94915,
+      "sha256": "863a1a33b035c9e448443d1a624174ebb98741fcb694e0b8b23c8976908b8f68"
+    },
+    {
+      "path": "qa/compact-layout-2026-10-21/gallery-desktop.png",
+      "bytes": 97644,
+      "sha256": "decf899d6b32e0dbf6553480ca82433684ca088d7fbc7c046738987f34b400b2"
+    },
+    {
+      "path": "qa/compact-layout-2026-10-21/gallery-mobile.png",
+      "bytes": 45231,
+      "sha256": "226887e97b92d584b2ab7267d5b88dd67fc19905afd2be729d827f8624906e69"
+    },
+    {
+      "path": "qa/compact-layout-2026-10-21/public-gallery-desktop.png",
+      "bytes": 94967,
+      "sha256": "33af773fb9a3b85632c0f93a4a2c180cde6becaaf59aceed2d6c3ebdf13c27bd"
+    },
+    {
+      "path": "qa/compact-layout-2026-10-21/public-stories-desktop.png",
+      "bytes": 105265,
+      "sha256": "3bacd7ba650079ca01767926d9ab2a0e995d6a65bb54bb1c052e76a3561265a4"
+    },
+    {
+      "path": "qa/compact-layout-2026-10-21/stories-desktop.png",
+      "bytes": 91229,
+      "sha256": "4c8f3e2a2952880ce2a49f94235dbc18e80c19330dbabc05d2f844682d67a1e4"
+    },
+    {
+      "path": "qa/compact-layout-2026-10-21/stories-mobile.png",
+      "bytes": 43651,
+      "sha256": "cc5b67be69bf136626cb8cd6e4860ee1cd57d7746de7a2e5257ea059a376fa31"
+    },
+    {
+      "path": "qa/compare-people-values.png",
+      "bytes": 1290793,
+      "sha256": "452fb77dfd4d83b0db215f4fe8b8f27253f3c7293d493eb2f5e18c29ff5f32c6"
+    },
+    {
+      "path": "qa/comparison-board.png",
+      "bytes": 2697176,
+      "sha256": "9043ff0e6959ab0e15723cf7779070cfd797d56ebaecc62e89a332691c71f630"
+    },
+    {
+      "path": "qa/final.png",
+      "bytes": 72970,
+      "sha256": "df019a8436ecb9cec58a12a24f3359f6b34abc6ed2f6d76973fe6697ddc7541b"
+    },
+    {
+      "path": "qa/hero.png",
+      "bytes": 96965,
+      "sha256": "a701188ee56105eb71a95e21effeda281730b1788b1d72f19b183bc087968bd5"
+    },
+    {
+      "path": "qa/people-benefits-1440.png",
+      "bytes": 86594,
+      "sha256": "efb613974edb525ac178e78559881500fc6f03e69b2ef91ecaa8e76cb6d05ac1"
+    },
+    {
+      "path": "qa/people-editorial-2026-10-19/desktop.png",
+      "bytes": 82573,
+      "sha256": "abddb36bcc5d2cfddbf0d2b9eca831fb69e6f7332db550b8598b6d029ec86637"
+    },
+    {
+      "path": "qa/people-editorial-2026-10-19/mobile.png",
+      "bytes": 41640,
+      "sha256": "d6ef6c7ba866e14918e72653204eee1fff31b4d1c1853e6dabe6f46102b2efaa"
+    },
+    {
+      "path": "qa/people-fruit-1440.png",
+      "bytes": 135608,
+      "sha256": "6671e7fb827cf72da8ae6ce5f1287f2b3ec8076c205df54ada23613ee1176eaa"
+    },
+    {
+      "path": "qa/people-fruit-mobile-390.png",
+      "bytes": 39540,
+      "sha256": "622fff82dbdd75c97e12cbbb664b9a06d8c688cc872dc420265615d8f62e096a"
+    },
+    {
+      "path": "qa/people-full-review.png",
+      "bytes": 757018,
+      "sha256": "66b1306758595db5a644dfae54022bae9034efdef937f283bc113058bbd7f60a"
+    },
+    {
+      "path": "qa/people-gallery-1440.png",
+      "bytes": 127301,
+      "sha256": "75ce16d52dd39349c1a68fff3e01f6e11054a621d26d79102d416702218480f9"
+    },
+    {
+      "path": "qa/people-mobile-390.png",
+      "bytes": 43412,
+      "sha256": "3515d384d93a0512f1fa775d94dc805370b06f58b65d85bb287cd558d475ebec"
+    },
+    {
+      "path": "qa/people.png",
+      "bytes": 134590,
+      "sha256": "df0a5a7d3bca47619011fe9a2b7ecc7c64cba64b46801142f2b84b17ab98b7ba"
+    },
+    {
+      "path": "qa/rut/desktop-gallery.png",
+      "bytes": 622631,
+      "sha256": "b4601c43059fb271b38b88cfd70a8e8c86d01c9aae997ca572c91247f265cd1c"
+    },
+    {
+      "path": "qa/rut/desktop-hero.png",
+      "bytes": 542857,
+      "sha256": "2bde97ebf4a344a73c27b079b3f2d0784537a7ed478ce019c8e24b32751d39d7"
+    },
+    {
+      "path": "qa/rut/desktop-story.png",
+      "bytes": 217641,
+      "sha256": "c0eee76b1f32e4c0c598c38934477b26a1e6ec876355aa67ab1506a364b30116"
+    },
+    {
+      "path": "qa/rut/mobile-gallery.png",
+      "bytes": 90503,
+      "sha256": "60159932a6033a9b60e6013738018530342eae5aba699f9449168775b0012cbc"
+    },
+    {
+      "path": "qa/rut/mobile-hero-art.png",
+      "bytes": 172820,
+      "sha256": "8ed0e742af13fb900237337d5715163f6911e2d05448f1eebe8dea5305004eee"
+    },
+    {
+      "path": "qa/rut/mobile-hero.png",
+      "bytes": 86794,
+      "sha256": "37b52000c7da97a9ce1d2b0ca2ceab2d7e0394088b73f4082f388d2d7f545a6b"
+    },
+    {
+      "path": "qa/rut/mobile-story.png",
+      "bytes": 131511,
+      "sha256": "b6b5d6ecb627dcf8d3d587c0a081bca5c743e789bf6d35ddc401c8ae4a131a77"
+    },
+    {
+      "path": "qa/socials-2026-10-21/footer-desktop.png",
+      "bytes": 67445,
+      "sha256": "41158f3dd658ea702df1651be03a2fb19072c2b1e383f2f7ddd99876ecbb15d8"
+    },
+    {
+      "path": "qa/socials-2026-10-21/footer-mobile.png",
+      "bytes": 41500,
+      "sha256": "ddbe0e75fa340a35ed879b383812378398414de19889a0fea3a26a67fd323aa4"
+    },
+    {
+      "path": "qa/socials-2026-10-21/public-footer.png",
+      "bytes": 66722,
+      "sha256": "f00583dccb95a2114f7a3b85cd970155ae9b830f17e9f2cbdd5a4eddc86314a6"
+    },
+    {
+      "path": "qa/source-people-brief.png",
+      "bytes": 360797,
+      "sha256": "8b1a443a4d36fc76e04f9847bd4a92763a7180b364d54de0b83b2dd04e3371c0"
+    },
+    {
+      "path": "qa/story.png",
+      "bytes": 65398,
+      "sha256": "dab412ac7e3f46b0ebd826cddeb3bbe61ec447047df88103e1952289b5ecddf9"
+    },
+    {
+      "path": "qa/strawberry-after-1024.png",
+      "bytes": 68364,
+      "sha256": "693d88c7b4cdf08d97b3e922bbee1d3efc43a51299ee82a321c649f04b850ab1"
+    },
+    {
+      "path": "qa/strawberry-comparison.png",
+      "bytes": 1233354,
+      "sha256": "608f0b71d60093a701a577398c102030329b8d98b2fe43ccb8b2ff622979a028"
+    },
+    {
+      "path": "qa/team-hints-2026-10-19/desktop.png",
+      "bytes": 68487,
+      "sha256": "bf814bb45fe605f452845d0bdbc5800bea730cc6cd8ed5a468517de4d5913af6"
+    },
+    {
+      "path": "qa/team-hints-2026-10-19/mobile.png",
+      "bytes": 38093,
+      "sha256": "34b7264b00053a9259c7e2302bba270a18d14b537ecb52d2e812f961e490d092"
+    },
+    {
+      "path": "qa/team-hints-2026-10-19/published.png",
+      "bytes": 66997,
+      "sha256": "0217d75db4f31cb35f388a182589131ab82f7049366bbadea8662eaeff6c8e97"
+    },
+    {
+      "path": "qa/tech.png",
+      "bytes": 90811,
+      "sha256": "86b70589b7b3567449875bdc307e9f923ad7b4e931fd3f78c7da4466f8af7e5c"
+    },
+    {
+      "path": "qa/techvill-full-1440.png",
+      "bytes": 947908,
+      "sha256": "a1407852e3faf6602cc30ef76e838c1569334ea2b76d2821bbbe5e33b9a5bbcd"
+    },
+    {
+      "path": "qa/techvill-full-thumb.png",
+      "bytes": 288274,
+      "sha256": "e31d477cb66b5a7e48e46621792f3e7fc6c597663f86e6042153366111c3b21f"
+    },
+    {
+      "path": "qa/vacancies.png",
+      "bytes": 69805,
+      "sha256": "fda5e0f56713824594102678d453eae93985e104b189048443a71bcdebdc282d"
+    },
+    {
+      "path": "qa/values-2026-10-21/gallery-controls-desktop.png",
+      "bytes": 102665,
+      "sha256": "8ab10a1f64c9ee1b2ece53e840fd52393e936df0a47f5dde3d69ce1e2e741146"
+    },
+    {
+      "path": "qa/values-2026-10-21/gallery-controls-mobile.png",
+      "bytes": 44165,
+      "sha256": "1fe379e0be510088e8e4a33703ffdf2e37798fefd34bcfd6e37525401855fcb8"
+    },
+    {
+      "path": "qa/values-2026-10-21/public-services-open.png",
+      "bytes": 78574,
+      "sha256": "370f333b25ccb75f0b52aa21c4fed786f395e867582a7a51e496fe272e791b0d"
+    },
+    {
+      "path": "qa/values-2026-10-21/services-closed-desktop.png",
+      "bytes": 69101,
+      "sha256": "6100f1bed7a8f91193d52ded7c5dde44077f92314830179cd95dbffba83c97d7"
+    },
+    {
+      "path": "qa/values-2026-10-21/services-open-320.png",
+      "bytes": 34310,
+      "sha256": "dee1eb109f3e2cb9236e5dabced7708fa85761ab63f0667d6b157473e87dd76f"
+    },
+    {
+      "path": "qa/values-2026-10-21/services-open-desktop.png",
+      "bytes": 71213,
+      "sha256": "152d625a7a9f885dca1ffd8a7fb03c6bacf0bfc5db812c61c33ef468dfea3c16"
+    },
+    {
+      "path": "qa/values-hover-2026-10-21/desktop-closed.png",
+      "bytes": 69993,
+      "sha256": "45c5bc16e0e6460d853cb3cd8791075adf39780b6d937fe336392264b8eba88e"
+    },
+    {
+      "path": "qa/values-hover-2026-10-21/desktop-open-keyboard.png",
+      "bytes": 78440,
+      "sha256": "729ece2349ff46165cbae5acc10aabcbb86627a44349991a205587cc4d454aa2"
+    },
+    {
+      "path": "qa/values-hover-2026-10-21/mobile-open.png",
+      "bytes": 43254,
+      "sha256": "7e8a1cabbadfe586109160857a0e5572e7d2b9bdd563f1a6a1f45f30b36b8063"
+    },
+    {
+      "path": "qa/values-hover-2026-10-21/public-desktop.png",
+      "bytes": 84882,
+      "sha256": "46ec1a74f620a556433e0f9b4b0c6098054b1ec48179f02101a85896a5934226"
+    },
+    {
+      "path": "rut-image-prompts.md",
+      "bytes": 12119,
+      "sha256": "9d1d52571d20a505ad51e6c7ec573e1a2f8bccd640f4414e421b1c88e55e6b03"
+    },
+    {
+      "path": "scripts/prepare-sites-build.mjs",
+      "bytes": 910,
+      "sha256": "b6a6adaa4fab3234676116dd1c9cb6611275ab9d92dd26f5bf402393e3744bf6"
+    },
+    {
+      "path": "scripts/typography-plugin.mjs",
+      "bytes": 2159,
+      "sha256": "87c13bd4f25883bd34d1a91c32cac13376f752147642d8aa33063b228fce9dee"
+    },
+    {
+      "path": "src/AiPage.jsx",
+      "bytes": 6068,
+      "sha256": "6f84a7e1f0a2c3548d858a3c581b66f4421c2872f945e93b36f8628091f79849"
+    },
+    {
+      "path": "src/AnimateAccordion.jsx",
+      "bytes": 2120,
+      "sha256": "5fa60b6455bf49d55c411fe36dfea797ca0066f493654b8765904eb71e779d74"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 96,
+      "sha256": "56232c449a36948c7299053f85afc6ff06c3abf44a9d622ebef56edfe0805485"
+    },
+    {
+      "path": "src/ArticleDetail.jsx",
+      "bytes": 4095,
+      "sha256": "e7e8c3950ce4923e43ca1f5c9378975aa31ea6e3888c4d46ff42a4905559a15b"
+    },
+    {
+      "path": "src/ContactForms.jsx",
+      "bytes": 11897,
+      "sha256": "13286e54587581d96b346749d2483b1116a486d237a9a51d693d930c028c83e0"
+    },
+    {
+      "path": "src/FooterSocials.jsx",
+      "bytes": 1112,
+      "sha256": "2b1d9b21e1e3ea77bb8e0c17234a6f18787f5b7fc03f34551458c6d8e7236e42"
+    },
+    {
+      "path": "src/Prototype.jsx",
+      "bytes": 44641,
+      "sha256": "32c63e78807d829736387bbfbbb878df5e98ce4955a8bc409e8ed7f46ff26434"
+    },
+    {
+      "path": "src/SecurityPage.jsx",
+      "bytes": 7986,
+      "sha256": "2733e5727746538ed4443916ad4e3640dd39c605a06509a9131cddab96024c2b"
+    },
+    {
+      "path": "src/ServicesPage.jsx",
+      "bytes": 11157,
+      "sha256": "a770e508b113ff28feaae8cc92876fad1d24e8a9f1804e68ff233bf440cbc931"
+    },
+    {
+      "path": "src/TechCenterHint.jsx",
+      "bytes": 2761,
+      "sha256": "50cbd8139e1d9175639d824832804bca8a8f67d3ee6ac8dc7e6778bdd82ed11d"
+    },
+    {
+      "path": "src/ai.css",
+      "bytes": 11968,
+      "sha256": "bacd95601507563d15e88b8ca960d0031dfa5e24571ac5fa14a88ae66a3b6514"
+    },
+    {
+      "path": "src/contact.css",
+      "bytes": 5505,
+      "sha256": "7c3bcfae38f176ebe18326bf8d164a7b3eaa27cfcdeed9a03b77ce355571cbdd"
+    },
+    {
+      "path": "src/data/ai.js",
+      "bytes": 6884,
+      "sha256": "1a7d7199bc66fa63a0d4f7d67aecddad9bfc03a393c5b235d4dd9d42c9ca75f2"
+    },
+    {
+      "path": "src/data/content.js",
+      "bytes": 16746,
+      "sha256": "ad8348b7adfeeaa6da73fc803c18be9c75c704df668e450a8b1a5d9c155107d0"
+    },
+    {
+      "path": "src/data/newsArticle.js",
+      "bytes": 25135,
+      "sha256": "5aa8e3a8fcab1d5c3fb3652dd1e0f9c8050de3bb21925536d806ab4e879221be"
+    },
+    {
+      "path": "src/data/service-value-behavior.mjs",
+      "bytes": 1548,
+      "sha256": "c6fbcbdf98420d14c7408f9833291bdfb96f0ad8977164c23f2d05c338f3ad76"
+    },
+    {
+      "path": "src/data/tech-centers.js",
+      "bytes": 1815,
+      "sha256": "eae35351341f5ea495ffac7f109b87b97958a977d99b3df106151503cba73b46"
+    },
+    {
+      "path": "src/data/typography.mjs",
+      "bytes": 722,
+      "sha256": "477ae85d53c35a532ebb13856de7933e625f516f2b0e44b8e6ee69bb86ab8254"
+    },
+    {
+      "path": "src/data/vacancy-filters.mjs",
+      "bytes": 1297,
+      "sha256": "3c0bed76ea3679bd09e94f71555235fb780f56aabfa024160a5a370263372479"
+    },
+    {
+      "path": "src/experience/ExperienceCanvas.jsx",
+      "bytes": 13659,
+      "sha256": "dcc560b19a4c5c6e4a158ef808c215aa5e694498054de457d5092ac99f2618c2"
+    },
+    {
+      "path": "src/experience/HeroFruitCanvas.jsx",
+      "bytes": 7905,
+      "sha256": "3afd5c701b0c1102ffb6be56eb80665c8657e2122ce608f8116566ce65b12c22"
+    },
+    {
+      "path": "src/experience/ImpactFruitCanvas.jsx",
+      "bytes": 2513,
+      "sha256": "48e3aba59480aafc83832546ecd4d76eaa23ef99bb52e22f70abcfa9deb65345"
+    },
+    {
+      "path": "src/experience/PeopleBentoFruit.jsx",
+      "bytes": 4692,
+      "sha256": "78d09fb96b4cd9eda3eacc1caa2360c9f31c3fa10a3a7401491317dd240382f5"
+    },
+    {
+      "path": "src/experience/PeopleFruitCanvas.jsx",
+      "bytes": 7066,
+      "sha256": "1feda86e8e4ca4883bac29fbc66119948144669227cd79db784a43e922e60272"
+    },
+    {
+      "path": "src/experience/banana-geometry.mjs",
+      "bytes": 1314,
+      "sha256": "42feba4390af3ad719c841ae4733fe7fc3294c5c72fe7cbab210fc69c11a94f2"
+    },
+    {
+      "path": "src/experience/fruit-geometry.mjs",
+      "bytes": 4132,
+      "sha256": "06fff936932c62427e999c969f5dccb11bc804230e8db64f1b28b780e9444ea8"
+    },
+    {
+      "path": "src/experience/hero-flight.mjs",
+      "bytes": 4543,
+      "sha256": "0e00d63ebee89849f02e0615673d886457153a05a540a6669a1d1e053aef614a"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.js",
+      "bytes": 431,
+      "sha256": "09188fa33c09b1ee69580c71b41736592f2899a5ae0763cd3ff93a5a9dae6962"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 511,
+      "sha256": "ac18f62db8957a43585b6192a8eaab7a5c6c0d14ea4899eee5ea1081d9931802"
+    },
+    {
+      "path": "src/security.css",
+      "bytes": 4356,
+      "sha256": "5455568eff03eb7d3819e820451806e3eca1a3e4de881db31213f1880d5a5851"
+    },
+    {
+      "path": "src/services.css",
+      "bytes": 6378,
+      "sha256": "b9c4e4102280201cb08cb1ae3c441ceec69565e75a686a05131dccec6fe49e0b"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 81534,
+      "sha256": "bde51b2498ae1ce8644f9c5dbcd4c7eab216887cc3d2f94b89f52404c3375fd3"
+    },
+    {
+      "path": "tests/ai-heading.test.mjs",
+      "bytes": 1139,
+      "sha256": "897cd76630c6f64c2f51b197f2f87396af92495dbbb8198cb0111f846bfb9cef"
+    },
+    {
+      "path": "tests/banana-geometry.test.mjs",
+      "bytes": 1087,
+      "sha256": "65fa4b73b6c87169be13110cfb704386494a6be141717f0543a60d27777925b4"
+    },
+    {
+      "path": "tests/brand-logo.test.mjs",
+      "bytes": 1737,
+      "sha256": "6b73fbeff9d3f1d091ae0dd2c640d07da5da20cf3cda7fce0f938f202f6f8ff7"
+    },
+    {
+      "path": "tests/editorial-content.test.mjs",
+      "bytes": 2815,
+      "sha256": "a8a71cf2089f0da17b2a172ecabb03631b0155ab28336445d55aaa01f43ee9fd"
+    },
+    {
+      "path": "tests/footer-socials.test.mjs",
+      "bytes": 2344,
+      "sha256": "f60b31ec201d377a11c4e3b052aa98bda458e188300c548992ba5dec345f4f10"
+    },
+    {
+      "path": "tests/fruit-geometry.test.mjs",
+      "bytes": 3689,
+      "sha256": "54b34e089d38dac0971c4f97dfe50576c920b397837b7c2cbcb3e96a97b77c00"
+    },
+    {
+      "path": "tests/header-navigation.test.mjs",
+      "bytes": 2063,
+      "sha256": "9136efa33c031c08d731f3f96cf346f256d920306459bd5dea884be18d38f855"
+    },
+    {
+      "path": "tests/hero-flight.test.mjs",
+      "bytes": 3438,
+      "sha256": "20645b8388683c415ff37a985a5dd8cb741af771a4d7a26fe7fdc14bfdf142c5"
+    },
+    {
+      "path": "tests/people-editorial.test.mjs",
+      "bytes": 4925,
+      "sha256": "02283a9199d106fde7fc15ba571bf2541a2ce14bde2f4f457dd5f8bc06c61cd1"
+    },
+    {
+      "path": "tests/people-fruit-policy.test.mjs",
+      "bytes": 1635,
+      "sha256": "d5264bc6c524a2f5e02762cbf21610ee3f9c65a07d7725aa61ebba604758aad0"
+    },
+    {
+      "path": "tests/service-value-hover.test.mjs",
+      "bytes": 3126,
+      "sha256": "e983740a8812983a466be3c9c953cbb40a9f37ae5942dfc9ef5be94ddbc43b08"
+    },
+    {
+      "path": "tests/services-values.test.mjs",
+      "bytes": 3815,
+      "sha256": "43196921f9b34af2879b6b00eddbbbe4f4a79c86ad7d8dc41ac8fd4d481d29bb"
+    },
+    {
+      "path": "tests/sites-worker.test.mjs",
+      "bytes": 3732,
+      "sha256": "41b297007fdca046f3f2b83f8d24911825de46e3e619269c05095cd383f2b979"
+    },
+    {
+      "path": "tests/story-portraits.test.mjs",
+      "bytes": 1649,
+      "sha256": "c7df77e08e80b4b72a8969316c43c6e63df8f26d323a5ab47fbc0dea08b5c50e"
+    },
+    {
+      "path": "tests/tech-center-hint.test.mjs",
+      "bytes": 4929,
+      "sha256": "5c2e6ede7ad0b306b6edd8dfe6e465c76e250481e4c62146ec84cd0e04d00a65"
+    },
+    {
+      "path": "tests/typography.test.mjs",
+      "bytes": 7223,
+      "sha256": "1b3d38016cd9d48d6b54dc0bf97dac3ea656cd64e9f99df9e4a9e75a9af6abd0"
+    },
+    {
+      "path": "tests/vacancy-filters.test.mjs",
+      "bytes": 1980,
+      "sha256": "6c15145cf2ac2f7940d9af59830e054e7554294213d3d2a381d32e7e899e7311"
+    },
+    {
+      "path": "vacancies-company-tabs-review.md",
+      "bytes": 4428,
+      "sha256": "6802802be80a32a8a78876434dcb2f747fd929276e5ceb366af766b6853d96ce"
+    },
+    {
+      "path": "vite.config.mjs",
+      "bytes": 516,
+      "sha256": "7ff93d5ee5a6c3e455739720cd30362cb94e0eec8a7bdf61fcabc0f73ae05676"
+    },
+    {
+      "path": "worker/index.js",
+      "bytes": 959,
+      "sha256": "b2392c00b4d530ecb03de594d5cae1a9f296e05dafa43419dc25c6bc959c0f44"
+    }
+  ]
+}

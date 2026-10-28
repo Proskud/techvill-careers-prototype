@@ -1,0 +1,59 @@
+.services-page { padding-top: 160px; }
+.services-hero { padding: 40px var(--page-pad) 88px; }
+.services-label { margin: 0 0 24px; color: var(--purple-deep); font-size: 16px; font-weight: 650; }
+.services-hero h1 { max-width: 1060px; margin: 0; font-size: clamp(48px, 7.3vw, 112px); line-height: 1.01; letter-spacing: -.055em; }
+.services-hero h1 span { color: var(--purple); }
+.services-intro { max-width: 640px; margin: 32px 0; color: var(--muted); font-size: clamp(18px, 2vw, 26px); line-height: 1.5; }
+.services-catalog { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; padding: 0 var(--page-pad) 100px; scroll-margin-top: 120px; }
+.service-entry { display: grid; grid-template-rows: auto auto 1fr auto; justify-items: start; gap: 16px; padding: 36px 0; border-top: 1px solid var(--line); }
+.service-icon { display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid var(--line); border-radius: 16px; color: var(--purple-deep); background: var(--lilac); }
+.service-icon svg { width: 28px; height: 28px; }
+.service-entry h2 { margin: 4px 0 0; font-size: clamp(23px, 2.2vw, 32px); line-height: 1.2; letter-spacing: -.035em; }
+.service-entry p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.service-entry a { display: flex; align-items: center; gap: 12px; color: var(--purple-deep); font-weight: 650; text-underline-offset: 4px; }
+.service-entry .service-security-action { min-height: 48px; padding: 12px 20px; font-size: 15px; text-decoration: none; }
+.services-portfolio { padding: 72px var(--page-pad); background: var(--purple-deep); color: var(--paper); }
+.services-portfolio header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 36px; }
+.services-portfolio h2, .services-values h2 { margin: 0; font-size: clamp(36px, 5vw, 72px); line-height: 1.1; letter-spacing: -.045em; }
+.services-slider-controls { display: flex; gap: 12px; }
+.services-slider-controls button { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid #ffffff70; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; }
+.services-slider-controls button:disabled { opacity: .35; cursor: default; }
+.services-product-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+.services-product-track figure { flex: 0 0 calc(100% - 32px); min-width: 0; margin: 0; scroll-snap-align: start; }
+.services-product-track figcaption { margin-bottom: 20px; font-size: 24px; font-weight: 650; }
+.services-product-media { overflow: hidden; border-radius: 24px; background: var(--purple-deep); }
+.services-product-track img { display: block; inline-size: 100%; block-size: auto; }
+.services-product-picker { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.services-product-picker button { padding: 12px 16px; border: 1px solid #ffffff70; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-size: 14px; cursor: pointer; }
+.services-product-picker button[aria-pressed="true"] { background: var(--lime); color: var(--purple-deep); border-color: var(--lime); }
+.services-portfolio :focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+.services-values { padding: 96px var(--page-pad); }
+.services-values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); grid-auto-rows: 1fr; gap: 24px; margin-block-start: 48px; }
+.services-values .service-value:last-child:nth-child(odd) { grid-column: auto; }
+.services-values .service-value summary { grid-template-columns: minmax(0, 1fr); grid-template-rows: 1fr auto; gap: 24px; padding: 28px 24px; }
+.services-values .ai-direction-copy { display: block; }
+.services-values .ai-direction-copy h3 { color: var(--purple-deep); font-size: clamp(24px, 2.1vw, 30px); line-height: 1.15; }
+.services-values .ai-direction-copy > p { margin-block-start: 16px; }
+.services-values :is(h2, h3) { text-wrap: balance; }
+.services-values p { text-wrap: pretty; }
+.services-values .ai-direction-details { padding-inline: 24px; }
+.service-value-hover-cue { display: none; }
+/* Touch and narrow screens keep the explicit native disclosure. */
+@media (min-width: 761px) and (hover: hover) and (pointer: fine) {
+  .services-values .service-value summary { grid-template-rows: 1fr; gap: 0; }
+  .services-values .ai-direction-toggle, .services-values .ai-direction-dismiss { display: none; }
+  .service-value-heading { display: flex; align-items: start; gap: 12px; }
+  .service-value-heading h3 { flex: 1; min-inline-size: 0; }
+  .service-value-hover-cue { display: block; flex: none; inline-size: 20px; block-size: 20px; margin-block-start: 3px; color: var(--purple-deep); transition: transform 180ms ease-out; }
+  .service-value[open] .service-value-hover-cue { transform: rotate(180deg); }
+  .services-values .ai-direction-details { padding-block-end: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { .service-value-hover-cue { transition: none; } }
+.services-contact { padding: 0 var(--page-pad) 100px; }
+.services-slider-controls { justify-content: center; margin-block-start: 24px; }
+.services-product-picker { justify-content: center; }
+.services-hero, .services-catalog, .services-portfolio, .services-values, .services-contact { padding-block-end: var(--section-gap); }
+.services-portfolio, .services-values { padding-block-start: var(--section-gap); }
+@media (min-width: 1600px) { .services-hero, .services-catalog, .services-portfolio, .services-values, .services-contact { padding-inline: max(var(--page-pad), calc((100vw - 1440px) / 2)); } }
+@media (max-width: 1080px) { .services-catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .services-page { padding-top: 100px; } .services-hero { padding-block: 28px 56px; } .services-catalog { grid-template-columns: minmax(0, 1fr); padding-bottom: 56px; } .services-portfolio { padding-block: 48px; } .services-values { padding-block: 56px; } .services-product-track figure { flex-basis: calc(100% - 20px); } .services-product-track figcaption { font-size: 20px; } .services-product-picker { flex-direction: column; align-items: flex-start; } .services-values-grid { grid-auto-rows: auto; margin-block-start: 32px; } }
