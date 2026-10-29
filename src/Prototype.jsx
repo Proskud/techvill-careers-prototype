@@ -344,14 +344,14 @@ function TechnologyStories() {
           <h2 id="people-care-title">Технологии с заботой</h2>
           <p>Ходим в <a href="https://habr.com/p/882212/" target="_blank" rel="noopener noreferrer">гембу<span className="visually-hidden"> — статья на Habr, откроется в новой вкладке</span></a>, пробуем себя в роли курьеров и сотрудников магазинов, чтобы увидеть процессы глазами пользователей. Так мы создали первый в России <a href="https://habr.com/p/882212/" target="_blank" rel="noopener noreferrer">offline-first PWA<span className="visually-hidden"> — статья на Habr, откроется в новой вкладке</span></a> для курьерской доставки.</p>
           </div>
-          <div className="people-story-portrait" aria-hidden="true"><img src="/assets/stories/care-person.webp" alt="" width="768" height="740" loading="lazy" decoding="async" /></div>
+          <div className="people-story-portrait" aria-hidden="true"><img src="/assets/stories/care-person.webp?v=20261029b" alt="" width="768" height="740" loading="lazy" decoding="async" /></div>
         </article>
         <article className="people-story" aria-labelledby="people-purpose-title">
           <div className="people-story-copy">
           <h2 id="people-purpose-title">Технологии с умом</h2>
           <p>Не гонимся за инновациями ради новизны, а выбираем то, что приносит пользу. Например, запустили <a href="https://habr.com/p/981866/" target="_blank" rel="noopener noreferrer">MCP-сервер<span className="visually-hidden"> — статья на Habr, откроется в новой вкладке</span></a>, который позволяет AI-агенту находить товары, изучать состав и КБЖУ и собирать корзину без лишних действий.</p>
           </div>
-          <div className="people-story-portrait" aria-hidden="true"><img src="/assets/stories/mind-person.webp" alt="" width="768" height="740" loading="lazy" decoding="async" /></div>
+          <div className="people-story-portrait" aria-hidden="true"><img src="/assets/stories/mind-person.webp?v=20261029" alt="" width="768" height="740" loading="lazy" decoding="async" /></div>
         </article>
       </div>
     </section>
