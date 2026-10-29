@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./AnimateAccordion.jsx";
+import { useHoverDisclosure } from "./hooks/useHoverDisclosure.js";
 import { ArrowDown, ArrowRight, BookOpen, CaretDown, ChartLineUp, ChatCircleDots, Sparkle, Basket } from "@phosphor-icons/react";
 import { aiArticles, aiDirections, aiPrinciples } from "./data/ai.js";
 import "./ai.css";
@@ -19,17 +21,16 @@ function DirectionVisual({ id }) {
   </div>;
 }
 
+// Turns the first mention of `link.text` into the shared marker link (same look and motion as the home stories).
+function linkify(paragraph, link) {
+  const at = link ? paragraph.indexOf(link.text) : -1;
+  if (at < 0) return paragraph;
+  return <>{paragraph.slice(0, at)}<a className="marker-link" href={link.href} target="_blank" rel="noopener noreferrer">{link.text}<span className="visually-hidden"> — статья на Habr, откроется в новой вкладке</span></a>{paragraph.slice(at + link.text.length)}</>;
+}
+
 export function AiPage() {
   useEffect(() => { document.title = "AI в ТехВилле — ТехВилл"; }, []);
-  useEffect(() => {
-    function closeOutside(event) {
-      document.querySelectorAll('.ai-direction[open]').forEach((item) => {
-        if (!item.contains(event.target)) item.open = false;
-      });
-    }
-    document.addEventListener('pointerdown', closeOutside);
-    return () => document.removeEventListener('pointerdown', closeOutside);
-  }, []);
+  const { hoverMode, expanded, onValueChange, itemProps } = useHoverDisclosure();
 
   return <div className="ai-page">
     <section className="ai-hero" aria-labelledby="ai-title">
@@ -55,20 +56,22 @@ export function AiPage() {
 
     <section className="ai-directions" id="ai-directions" aria-labelledby="ai-directions-title">
       <header className="ai-section-heading"><h2 id="ai-directions-title">Наши направления</h2><p>Встраиваем AI в продукты и процессы — от поиска знаний до прогноза спроса и ассортимента</p></header>
-      <div className="ai-directions-grid">
-        {aiDirections.map((direction) => <details name="ai-directions" className={`ai-direction ai-direction-${direction.id}`} key={direction.id} onKeyDown={(event) => {
-          if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus(); }
-        }}>
-          <summary>
+      {/* Same disclosure as the home «Направления и команды» cards: hover/focus on wide pointers, «Подробнее» on touch. */}
+      <Accordion value={expanded} onValueChange={onValueChange} className={`ai-directions-grid disclosure-grid${hoverMode ? " is-hover" : ""}`}>
+        {aiDirections.map((direction) => <AccordionItem className={`ai-direction disclosure-card ai-direction-${direction.id}`} value={direction.id} key={direction.id} {...itemProps(direction.id)}>
+          <div className="ai-direction-head">
             <DirectionVisual id={direction.id} />
             <div className="ai-direction-copy"><h3>{direction.title}</h3><p>{direction.description}</p></div>
-            <span className="ai-direction-toggle"><span className="ai-open-label">Подробнее</span><span className="ai-close-label">Свернуть</span><CaretDown aria-hidden="true" /></span>
-          </summary>
-          <div className="ai-direction-details">{direction.details.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<button className="ai-direction-dismiss" type="button" aria-label={`Закрыть подробности: ${direction.title}`} onClick={(event) => {
-            const item = event.currentTarget.closest('details'); item.open = false; item.querySelector('summary')?.focus();
-          }}>Закрыть подробности</button></div>
-        </details>)}
-      </div>
+            <CaretDown className="ai-direction-hover-cue" aria-hidden="true" />
+          </div>
+          <AccordionTrigger heading={false} className="ai-direction-toggle">
+            <span className="ai-open-label">Подробнее</span><span className="ai-close-label">Свернуть</span><span className="visually-hidden">: {direction.title}</span><CaretDown aria-hidden="true" />
+          </AccordionTrigger>
+          <AccordionContent variant="disclosure">
+            <div className="ai-direction-details">{direction.details.map((paragraph) => <p key={paragraph}>{linkify(paragraph, direction.link)}</p>)}</div>
+          </AccordionContent>
+        </AccordionItem>)}
+      </Accordion>
     </section>
 
     <section className="ai-blog" aria-labelledby="ai-blog-title">

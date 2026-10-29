@@ -58,18 +58,36 @@ test('two-column cards keep fruits and titles visible and put details behind the
   assert.doesNotMatch(page, /TechCenterHint/);
 });
 
-test('wide fine pointers grow the whole card over the next row on hover or focus; touch keeps the in-flow «Подробнее» button', () => {
+test('home and /ai cards share one hover disclosure: whole card grows over the next row on wide pointers, «Подробнее» on touch', () => {
   const accordion = readFileSync(new URL('../src/AnimateAccordion.jsx', import.meta.url), 'utf8');
-  assert.match(page, /import \{ serviceValueHoverQuery \} from "\.\/data\/service-value-behavior\.mjs"/);
-  assert.match(technology, /setExpanded\(hoverMode \? next\.slice\(-1\) : next\)/);
-  assert.match(technology, /setTimeout\(\(\) => openCard\(group\.area\), 90\)/);
-  assert.match(technology, /event\.key === "Escape"/);
-  assert.match(technology, /<AccordionContent variant="disclosure">/);
+  const hook = readFileSync(new URL('../src/hooks/useHoverDisclosure.js', import.meta.url), 'utf8');
+  const ai = readFileSync(new URL('../src/AiPage.jsx', import.meta.url), 'utf8');
+  const aiCss = readFileSync(new URL('../src/ai.css', import.meta.url), 'utf8');
+  assert.match(hook, /import \{ serviceValueHoverQuery \} from "\.\.\/data\/service-value-behavior\.mjs"/);
+  assert.match(hook, /setExpanded\(hoverMode \? next\.slice\(-1\) : next\)/);
+  assert.match(hook, /setTimeout\(\(\) => openCard\(id\), 90\)/);
+  assert.match(hook, /event\.key === "Escape"/);
+  for (const source of [technology, ai]) {
+    assert.match(source, /useHoverDisclosure\(\)/);
+    assert.match(source, /<AccordionContent variant="disclosure">/);
+    assert.match(source, /disclosure-grid\$\{hoverMode \? " is-hover" : ""\}/);
+  }
   assert.match(accordion, /const disclosureVariants = \{ collapsed: \{ height: 0, opacity: 0 \}, expanded: \{ height: "auto", opacity: 1 \} \};/);
   assert.match(accordion, /type: "spring", bounce: 0/);
-  assert.match(accordion, /card\.style\.setProperty\("--drawer-h"/);
-  assert.match(css, /\.tech-grid\.is-hover \.tech-card \{ margin-block-end: calc\(-1 \* var\(--drawer-h, 0px\)\); \}/);
+  assert.match(accordion, /closest\("\.disclosure-card"\)/);
+  assert.match(css, /\.disclosure-grid\.is-hover \.disclosure-card \{ margin-block-end: calc\(-1 \* var\(--drawer-h, 0px\)\); \}/);
   assert.doesNotMatch(css, /\.tech-map-accordion-content \{ position: absolute/);
   assert.match(css, /\.tech-grid\.is-hover \.tech-map-trigger \{ position: absolute; inline-size: 1px;/);
-  assert.match(css, /\.tech-grid\.is-hover \.tech-card:has\(\.tech-map-trigger:focus-visible\) \{ outline: 2px solid var\(--lime\);/);
+  assert.match(aiCss, /\.ai-directions-grid\.is-hover \.ai-direction-toggle \{ position: absolute; inline-size: 1px;/);
+  assert.match(aiCss, /\.ai-directions-grid\.is-hover \.ai-direction > \.tech-map-accordion-heading \{ position: absolute; \}/);
+  assert.match(aiCss, /\.ai-directions-grid\.is-hover \{ grid-auto-rows: auto; \}/);
+  assert.match(aiCss, /\.ai-directions-grid :is\(\.ai-direction-copy > p, \.ai-direction-details p\) \{ max-inline-size: 70ch; \}/);
+});
+
+test('the /ai MCP card links «MCP‑сервер» to the same Habr article as the home story, with the shared marker link', async () => {
+  const { aiDirections } = await import('../src/data/ai.js');
+  const ai = readFileSync(new URL('../src/AiPage.jsx', import.meta.url), 'utf8');
+  assert.deepEqual(aiDirections.find((item) => item.id === 'mcp').link, { text: 'MCP-сервер', href: 'https://habr.com/p/981866/' });
+  assert.match(ai, /className="marker-link" href=\{link\.href\} target="_blank" rel="noopener noreferrer"/);
+  assert.match(css, /\.people-story a, \.marker-link \{/);
 });

@@ -125,3 +125,38 @@
   .ai-careers { flex-direction: column; align-items: flex-start; padding-block: 64px; gap: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { .ai-direction-toggle svg { transition: none; } }
+
+/* /ai directions use the shared hover disclosure (see useHoverDisclosure): the whole card grows over the next row on
+   wide fine pointers; touch keeps the «Подробнее» row and opens in flow. Services values keep the native <details>. */
+.ai-directions-grid .ai-direction { --tech-gap: 20px; display: flex; flex-direction: column; gap: var(--tech-gap); padding: 24px 20px; transition: box-shadow 220ms ease-out, border-color 220ms ease-out; }
+.ai-direction-head { position: relative; flex: 1; display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: start; gap: 12px; }
+.ai-directions-grid .ai-direction-toggle { inline-size: 100%; margin: 0; padding: 16px 0 0; border: 0; border-block-start: 1px solid var(--line); background: none; font-family: inherit; cursor: pointer; text-align: start; }
+.ai-directions-grid .ai-direction-toggle:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; border-radius: 8px; }
+@media (hover: hover) { .ai-directions-grid .ai-direction-toggle:hover svg { background: var(--lime); } }
+.ai-direction[data-state="open"] .ai-open-label { display: none; }
+.ai-direction[data-state="open"] .ai-close-label { display: inline; }
+.ai-direction[data-state="open"] .ai-direction-toggle svg { transform: rotate(180deg); background: var(--lime); }
+.ai-directions-grid .ai-direction > .tech-map-accordion-content { margin-block-start: calc(-1 * var(--tech-gap)); }
+.ai-directions-grid .ai-direction-details { position: static; max-height: none; overflow: visible; padding: var(--tech-gap) 0 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+.ai-direction-hover-cue { display: none; }
+.ai-directions-grid.is-hover .ai-direction-hover-cue { display: block; position: absolute; inset-block-start: 2px; inset-inline-end: 0; inline-size: 20px; block-size: 20px; color: var(--muted); transition: transform 220ms ease, color 150ms ease-out; }
+.ai-directions-grid.is-hover .ai-direction-copy h3 { padding-inline-end: 32px; }
+.ai-directions-grid.is-hover .ai-direction[data-state="open"] .ai-direction-hover-cue { transform: rotate(180deg); color: var(--purple); }
+/* The visually hidden trigger's wrapper leaves the flow too, so no empty flex gap is added under the copy. */
+.ai-directions-grid.is-hover .ai-direction > .tech-map-accordion-heading { position: absolute; }
+.ai-directions-grid.is-hover .ai-direction-toggle { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.ai-directions-grid.is-hover .ai-direction:has(.ai-direction-toggle:focus-visible) { outline: 3px solid var(--purple); outline-offset: 3px; }
+.ai-directions-grid.is-hover .ai-direction:is([data-state="open"], :has(.tech-map-accordion-content)) { z-index: 4; border-color: rgba(33, 0, 102, 0.2); box-shadow: 0 24px 48px rgba(33, 0, 102, 0.16); }
+/* Hover mode has no bottom «Подробнее» row to anchor equal 1fr rows, so rows follow their content (row-mates still stretch). */
+.ai-directions-grid.is-hover { grid-auto-rows: auto; }
+/* Keep reading lines in the 60–75 character range, also in the full-width MCP card. */
+.ai-directions-grid :is(.ai-direction-copy > p, .ai-direction-details p) { max-inline-size: 70ch; }
+@media (max-width: 620px) {
+  .ai-directions-grid .ai-direction { padding: 20px 16px; }
+  /* The 56px tile overlapped the title in the 40px column; the tile now matches its column. */
+  .ai-direction-head { grid-template-columns: 44px minmax(0, 1fr); column-gap: 12px; }
+  .ai-directions-grid .ai-direction-visual { inline-size: 44px; block-size: 56px; border-radius: 12px; }
+  .ai-directions-grid .ai-visual-symbol { inline-size: 34px; block-size: 34px; border-radius: 10px; }
+  .ai-directions-grid .ai-visual-symbol svg { inline-size: 22px; block-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .ai-direction-hover-cue, .ai-directions-grid .ai-direction { transition: none; } }

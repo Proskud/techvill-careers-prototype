@@ -42,19 +42,18 @@ export const techTeamGroups = [
 
 // Verified corporate Habr publications, 12 October 2026. Keep legacy IDs for existing URLs.
 export const careerArticles = [
-  { id: "ecosystem", tag: "products", title: "Как мы перестали хвататься за гипотезы и начали выбирать точки максимального потенциала", description: "Как исследования покупательских задач помогают выбирать продуктовые приоритеты", photo: "/assets/articles/habr-1086492.png", photoAlt: "Обложка статьи о продуктовых приоритетах", href: "https://habr.com/ru/companies/vkusvill/articles/1086492/", external: true },
-  { id: "technology", tag: "technology", title: "Claude Code в пентесте ТехВилла: где ИИ ускоряет работу, а где ошибается", description: "Опыт команды безопасности: возможности и ограничения AI в пентесте", photo: "/assets/articles/habr-1075172.png", photoAlt: "Обложка статьи о Claude Code в пентесте", href: "https://habr.com/ru/companies/vkusvill/articles/1075172/", external: true },
-  { id: "distributed-team", tag: "technology", title: "Как мы научили AI разбирать упавшие автотесты и заводить баги в Трекере", description: "Разбор ошибок с помощью TestOps, Яндекс Трекера и AI-инструментов", photo: "/assets/articles/habr-1056500.png", photoAlt: "Обложка статьи об автоматизации тестирования", href: "https://habr.com/ru/companies/vkusvill/articles/1056500/", external: true },
-  { id: "growth", tag: "products", title: "Как мы не обожглись на быстрых ML-экспериментах: опыт с 10% аудитории, холиварами с аналитиками и «лампой для лишая»", description: "Как команда рекомендаций проверяет ML-гипотезы на небольшой аудитории", photo: "/assets/articles/habr-1053624.png", photoAlt: "Обложка статьи о ML-экспериментах", href: "https://habr.com/ru/companies/vkusvill/articles/1053624/", external: true },
-  { id: "stores", tag: "technology", title: "Как мы превратили Swagger из документации в двигатель API-автотестов", description: "Генерация тестов и проверка покрытия по OpenAPI-контракту", photo: "/assets/articles/habr-1050894.png", photoAlt: "Обложка статьи об API-автотестах", href: "https://habr.com/ru/companies/vkusvill/articles/1050894/", external: true },
-  { id: "altai", aliases: ["atomic-people"], tag: "team", title: "Поход на Алтай: лёгкий маршрут, лесная тропа", description: "Рассказы шести коллег о горах, взаимопомощи и путешествии, которое объединило команду", photo: "https://techvill.ru/api/uploads/1789456400362_IMG_8299__1_.JPG", photoAlt: "Команда ТехВилл в походе на Алтае", href: "/blog/altai", fullArticle: true, blogOnly: true },
+  { id: "ecosystem", tag: "read", title: "Как мы перестали хвататься за гипотезы и начали выбирать точки максимального потенциала", description: "Как исследования покупательских задач помогают выбирать продуктовые приоритеты", photo: "/assets/articles/habr-1086492.png", photoAlt: "Обложка статьи о продуктовых приоритетах", href: "https://habr.com/ru/companies/vkusvill/articles/1086492/", external: true },
+  { id: "technology", tag: "read", title: "Claude Code в пентесте ТехВилла: где ИИ ускоряет работу, а где ошибается", description: "Опыт команды безопасности: возможности и ограничения AI в пентесте", photo: "/assets/articles/habr-1075172.png", photoAlt: "Обложка статьи о Claude Code в пентесте", href: "https://habr.com/ru/companies/vkusvill/articles/1075172/", external: true },
+  { id: "distributed-team", tag: "read", title: "Как мы научили AI разбирать упавшие автотесты и заводить баги в Трекере", description: "Разбор ошибок с помощью TestOps, Яндекс Трекера и AI-инструментов", photo: "/assets/articles/habr-1056500.png", photoAlt: "Обложка статьи об автоматизации тестирования", href: "https://habr.com/ru/companies/vkusvill/articles/1056500/", external: true },
+  { id: "growth", tag: "read", title: "Как мы не обожглись на быстрых ML-экспериментах: опыт с 10% аудитории, холиварами с аналитиками и «лампой для лишая»", description: "Как команда рекомендаций проверяет ML-гипотезы на небольшой аудитории", photo: "/assets/articles/habr-1053624.png", photoAlt: "Обложка статьи о ML-экспериментах", href: "https://habr.com/ru/companies/vkusvill/articles/1053624/", external: true },
+  { id: "stores", tag: "read", title: "Как мы превратили Swagger из документации в двигатель API-автотестов", description: "Генерация тестов и проверка покрытия по OpenAPI-контракту", photo: "/assets/articles/habr-1050894.png", photoAlt: "Обложка статьи об API-автотестах", href: "https://habr.com/ru/companies/vkusvill/articles/1050894/", external: true },
+  { id: "altai", aliases: ["atomic-people"], tag: "read", title: "Поход на Алтай: лёгкий маршрут, лесная тропа", description: "Рассказы шести коллег о горах, взаимопомощи и путешествии, которое объединило команду", photo: "https://techvill.ru/api/uploads/1789456400362_IMG_8299__1_.JPG", photoAlt: "Команда ТехВилл в походе на Алтае", href: "/blog/altai", fullArticle: true, blogOnly: true },
 ];
 
+// Content format, not topic: «Читать» for articles, «Смотреть» for future videos.
 export const articleTags = [
-  { id: "products", label: "Продукты" },
-  { id: "technology", label: "Технологии" },
-  { id: "team", label: "Жизнь команды" },
-  { id: "growth", label: "Развитие" },
+  { id: "read", label: "Читать" },
+  { id: "watch", label: "Смотреть" },
 ];
 
 export const jobs = [
@@ -107,6 +106,8 @@ export const jobs = [
     id: 2,
     company: "techvill",
     title: "ML-инженер",
+    // Demonstration salary requested by the user on 29 October to show the row format; not an approved offer.
+    salary: "от 100 000 ₽",
     direction: "ai",
     team: "AI и данные",
     format: "Гибрид",

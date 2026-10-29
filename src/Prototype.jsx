@@ -21,10 +21,10 @@ import { AiPage } from "./AiPage.jsx";
 import { ServicesPage } from "./ServicesPage.jsx";
 import { SecurityPage } from "./SecurityPage.jsx";
 import { ContactBanner, TalentApplication } from "./ContactForms.jsx";
-import { directionLabel, matchesVacancy, salaryLabel, vacancyCountLabel, vacancyDirections } from "./data/vacancy-filters.mjs";
+import { matchesVacancy, salaryLabel, vacancyCountLabel, vacancySubtitle } from "./data/vacancy-filters.mjs";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./AnimateAccordion.jsx";
 import { techCenters } from "./data/tech-centers.js";
-import { serviceValueHoverQuery } from "./data/service-value-behavior.mjs";
+import { useHoverDisclosure } from "./hooks/useHoverDisclosure.js";
 import { FooterSocials } from "./FooterSocials.jsx";
 
 const ExperienceCanvas = lazy(() => import("./experience/ExperienceCanvas.jsx").then((module) => ({ default: module.ExperienceCanvas })));
@@ -507,50 +507,15 @@ function People() {
 }
 
 function Technology() {
-  const [hoverMode, setHoverMode] = useState(() => typeof window !== "undefined" && window.matchMedia(serviceValueHoverQuery).matches);
-  const [expanded, setExpanded] = useState([]);
-  const closeTimer = useRef(null);
-  const openTimer = useRef(null);
-  useEffect(() => {
-    const query = window.matchMedia(serviceValueHoverQuery);
-    const sync = () => { setHoverMode(query.matches); setExpanded([]); };
-    query.addEventListener("change", sync);
-    return () => { query.removeEventListener("change", sync); clearTimeout(closeTimer.current); clearTimeout(openTimer.current); };
-  }, []);
-  // Wide pointer layouts open one overlay panel on hover or keyboard focus; touch and narrow layouts keep the «Подробнее» button.
-  useEffect(() => {
-    if (!hoverMode || !expanded.length) return undefined;
-    const onKey = (event) => { if (event.key === "Escape") setExpanded([]); };
-    const onPointer = (event) => { if (!event.target.closest?.(".tech-card[data-state='open']")) setExpanded([]); };
-    document.addEventListener("keydown", onKey);
-    document.addEventListener("pointerdown", onPointer);
-    return () => { document.removeEventListener("keydown", onKey); document.removeEventListener("pointerdown", onPointer); };
-  }, [hoverMode, expanded]);
-  const openCard = (area) => { clearTimeout(closeTimer.current); clearTimeout(openTimer.current); setExpanded([area]); };
-  const hoverProps = (group) => (!hoverMode || !(group.icons.length || group.stack.length)) ? {} : {
-    // A short intent delay keeps a pointer that merely crosses the grid from flashing panels open.
-    onPointerEnter: (event) => {
-      if (event.pointerType !== "mouse") return;
-      clearTimeout(closeTimer.current);
-      clearTimeout(openTimer.current);
-      openTimer.current = setTimeout(() => openCard(group.area), 90);
-    },
-    onPointerLeave: (event) => {
-      const card = event.currentTarget;
-      clearTimeout(openTimer.current);
-      clearTimeout(closeTimer.current);
-      closeTimer.current = setTimeout(() => { if (!card.querySelector(":focus-visible")) setExpanded((current) => current.filter((area) => area !== group.area)); }, 120);
-    },
-    onFocus: (event) => { if (event.target.matches(":focus-visible")) openCard(group.area); },
-    onBlur: (event) => { if (!event.currentTarget.contains(event.relatedTarget)) setExpanded((current) => current.filter((area) => area !== group.area)); },
-  };
+  // Wide pointer layouts open one card on hover or keyboard focus; touch and narrow layouts keep the «Подробнее» button.
+  const { hoverMode, expanded, onValueChange, itemProps } = useHoverDisclosure();
   return (
     <section className="technology chapter" id="technology" aria-labelledby="technology-title">
       <div className="tech-map">
         <div className="tech-map-heading"><h2 id="technology-title">Направления и команды</h2></div>
-        <Accordion value={expanded} onValueChange={(next) => setExpanded(hoverMode ? next.slice(-1) : next)} className={`tech-grid${hoverMode ? " is-hover" : ""}`}>
+        <Accordion value={expanded} onValueChange={onValueChange} className={`tech-grid disclosure-grid${hoverMode ? " is-hover" : ""}`}>
           {techTeamGroups.map((group) => (
-            <AccordionItem className="tech-card" value={group.area} key={group.area} {...hoverProps(group)}>
+            <AccordionItem className="tech-card disclosure-card" value={group.area} key={group.area} {...itemProps(group.area, group.icons.length > 0 || group.stack.length > 0)}>
               <h3 className="tech-map-title">{group.area}</h3>
               {(group.icons.length > 0 || group.stack.length > 0) && <CaretDown className="tech-card-hover-cue" aria-hidden="true" />}
               <ul className="tech-card-teams" aria-label={group.icons.length > 1 ? "Центры разработки" : group.icons.length ? "Центр разработки" : "Команда"}>
@@ -634,12 +599,13 @@ function Blog() {
   };
   return (
     <section className="blog-page" aria-labelledby="blog-title">
-      <header className="blog-heading"><h1 id="blog-title">Блог ТехВилла</h1><p>О продуктах, технологиях и жизни команды</p></header>
+      <header className="blog-heading"><h1 id="blog-title">Блог</h1><p>О продуктах, технологиях и жизни команды</p></header>
       <div className="blog-filters" role="group" aria-label="Темы статей">
         {articleTags.map((tag) => <button key={tag.id} type="button" className={`blog-filter tag-${tag.id}`} aria-pressed={selectedTags.includes(tag.id)} aria-controls="blog-results" onClick={() => filter(tag.id)}>{tag.label}</button>)}
       </div>
       <p className="visually-hidden" aria-live="polite">Показано статей: {visibleArticles.length}</p>
       <div className="career-article-grid" id="blog-results">{visibleArticles.map((article) => <ArticleCard article={article} key={article.id} />)}</div>
+      {visibleArticles.length === 0 && <p className="blog-empty">Видео скоро появятся</p>}
     </section>
   );
 }
@@ -653,20 +619,30 @@ function JobDetail({ job }) {
   return (
     <article className="job-detail-page" aria-labelledby="job-title">
       <a className="job-back-link" href="/vacancies"><ArrowLeft /> Все вакансии</a>
+      <div className="job-detail-layout">
       <header className="job-detail-heading">
-        <div className="job-detail-tags"><span>{job.team}</span><span>{job.format}</span></div>
         <h1 id="job-title">{job.title}</h1>
-        {salaryLabel(job) && <p className="job-salary" aria-label="Зарплата">{salaryLabel(job)}</p>}
         <p>{job.description}</p>
-        <a className="button button-lime" href="#application">Откликнуться <ArrowDown /></a>
       </header>
+      {/* Summary card: salary only when an approved string exists, then direction, format and the single primary action.
+          DOM order keeps it right after the heading, so phones see salary and «Откликнуться» before the details. */}
+      <aside className="job-summary" aria-label="Коротко о вакансии">
+        {salaryLabel(job) && <p className="job-salary"><span>Зарплата</span><strong>{salaryLabel(job)}</strong></p>}
+        <dl className="job-summary-facts">
+          <div><dt>Направление</dt><dd>{job.team}</dd></div>
+          <div><dt>Формат</dt><dd>{job.format}</dd></div>
+          {job.schedule && <div><dt>График</dt><dd>{job.schedule}</dd></div>}
+        </dl>
+        <a className="button button-lime" href="#application">Откликнуться <ArrowDown /></a>
+      </aside>
       <div className="job-detail-body">
         {job.stack && <section className="job-detail-section"><h2>Наш стек</h2>{job.stack.map((item) => <p key={item}>{item}</p>)}</section>}
         <section className="job-detail-section"><h2>Задачи</h2><ul>{job.tasks.map((task) => <li key={task}>{task}</li>)}</ul></section>
         <section className="job-detail-section"><h2>Требования</h2><ul>{job.expectations.map((item) => <li key={item}>{item}</li>)}</ul></section>
         {job.advantages && <section className="job-detail-section"><h2>Будет большим плюсом</h2><ul>{job.advantages.map((item) => <li key={item}>{item}</li>)}</ul></section>}
         <section className="job-detail-section"><h2>Условия работы</h2>{job.conditions ? <ul>{job.conditions.map((item) => <li key={item}>{item}</li>)}</ul> : <p>Работу над цифровыми продуктами ВкусВилла, поддержку команды и возможности профессионального развития.</p>}<a className="text-link" href="/#benefits">Подробнее о преимуществах <ArrowRight /></a></section>
-        <TalentApplication job={job} />
+      </div>
+      <TalentApplication job={job} />
       </div>
     </article>
   );
@@ -675,14 +651,12 @@ function JobDetail({ job }) {
 function Vacancies() {
   useEffect(() => { document.title = "Вакансии — ТехВилл"; }, []);
   const [company, setCompany] = useState("techvill");
-  const [directions, setDirections] = useState([]);
   const [query, setQuery] = useState("");
   const companyTabs = [{ key: "techvill", label: "ТехВилл" }, { key: "cyberchef", label: "Кибершеф" }];
   const tabRefs = useRef([]);
   const companyJobs = useMemo(() => jobs.filter((job) => job.company === company), [company]);
-  const visibleJobs = useMemo(() => companyJobs.filter((job) => matchesVacancy(job, directions, query)), [companyJobs, directions, query]);
-  const selectCompany = (key) => { setCompany(key); setDirections([]); };
-  const toggleDirection = key => setDirections(current => current.includes(key) ? current.filter(item => item !== key) : [...current, key]);
+  const visibleJobs = useMemo(() => companyJobs.filter((job) => matchesVacancy(job, [], query)), [companyJobs, query]);
+  const selectCompany = (key) => setCompany(key);
   const handleTabKey = (event, index) => {
     const next = event.key === "Home" ? 0 : event.key === "End" ? 1 : event.key === "ArrowRight" || event.key === "ArrowLeft" ? (index + 1) % 2 : null;
     if (next === null) return;
@@ -695,7 +669,6 @@ function Vacancies() {
     <section className="vacancies chapter" id="vacancies" aria-labelledby="vacancies-title">
       <div className="vacancy-heading">
         <h1 id="vacancies-title">Вакансии</h1>
-        <p>Работа в ТехВилле и Кибершефе</p>
       </div>
       <div className="vacancy-company-tabs" role="tablist" aria-label="Компания">
         {companyTabs.map((item, index) => (
@@ -708,12 +681,6 @@ function Vacancies() {
       <div key={item.key} role="tabpanel" id={`company-panel-${item.key}`} aria-labelledby={`company-tab-${item.key}`} hidden={company !== item.key} tabIndex={0}>
       {company === item.key && <>
       <div className="job-filters">
-        <div className="job-direction-filters" role="group" aria-label="Направление">
-          <button type="button" className={!directions.length ? "is-active" : ""} aria-pressed={!directions.length} onClick={() => setDirections([])}>Все направления</button>
-          {vacancyDirections.filter((filter) => company === "techvill" || filter.key === "ai").map((item) => (
-            <button type="button" key={item.key} className={directions.includes(item.key) ? "is-active" : ""} aria-pressed={directions.includes(item.key)} onClick={() => toggleDirection(item.key)}>{item.label}</button>
-          ))}
-        </div>
         <div className="job-search">
           <MagnifyingGlass aria-hidden="true" />
           <label className="visually-hidden" htmlFor="vacancy-search">Поиск вакансий по названию</label>
@@ -721,14 +688,14 @@ function Vacancies() {
           {query && <button type="button" aria-label="Очистить поиск" onClick={() => setQuery("")}><X aria-hidden="true" /></button>}
         </div>
       </div>
-      <div className="job-results-heading"><span role="status">{vacancyCountLabel(visibleJobs.length)} · {item.label} · {directionLabel(directions)}</span></div>
+      <div className="job-results-heading"><span role="status">{vacancyCountLabel(visibleJobs.length)} · {item.label}</span></div>
       <div className="job-list">
         {visibleJobs.map((job) => (
           <a className="job-row" key={job.id} href={`/vacancies/${job.id}`}>
-            <span className="job-row-main"><strong>{job.title}</strong><small>{job.description}</small></span><span className="job-row-meta"><span>{job.team}</span><span>{job.format}</span></span><ArrowRight />
+            <span className="job-row-main"><strong>{job.title}</strong>{vacancySubtitle(job) && <small>{vacancySubtitle(job)}</small>}</span><span className="job-row-meta"><span>{job.team}</span></span><ArrowRight />
           </a>
         ))}
-        {visibleJobs.length === 0 && <div className="job-empty"><p>{query.trim() ? "По этому запросу вакансий не найдено." : "Сейчас в выбранных направлениях нет открытых вакансий."}</p><button type="button" onClick={() => { setDirections([]); setQuery(""); }}>Сбросить фильтры</button></div>}
+        {visibleJobs.length === 0 && <div className="job-empty">{query.trim() ? <><p>По этому запросу вакансий не найдено.</p><button type="button" onClick={() => setQuery("")}>Сбросить поиск</button></> : <p>Сейчас открытых вакансий нет.</p>}</div>}
       </div>
       </>}
       </div>

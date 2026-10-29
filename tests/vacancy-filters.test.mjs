@@ -30,3 +30,14 @@ test("missing or blank salaries stay absent; approved strings retain their wordi
   for (const salary of [undefined, null, "", "   ", 50000]) assert.equal(salaryLabel({ salary }), "");
   assert.equal(salaryLabel({ salary: "  по договорённости  " }), "по договорённости");
 });
+
+test("vacancy row subtitle shows approved salary, schedule and format, skipping what is missing", async () => {
+  const { vacancySubtitle } = await import("../src/data/vacancy-filters.mjs");
+  assert.equal(vacancySubtitle({ salary: "от 100 000 ₽", schedule: "Полный день", format: "Гибрид" }), "от 100 000 ₽ · Полный день · Гибрид");
+  assert.equal(vacancySubtitle({ format: "Удалённо" }), "Удалённо");
+  assert.equal(vacancySubtitle({ salary: "  ", format: "Гибрид" }), "Гибрид");
+  assert.equal(vacancySubtitle({}), "");
+  const page = (await import("node:fs")).readFileSync(new URL("../src/Prototype.jsx", import.meta.url), "utf8");
+  assert.match(page, /\{vacancySubtitle\(job\) && <small>\{vacancySubtitle\(job\)\}<\/small>\}/);
+  assert.doesNotMatch(page, /<small>\{job\.description\}<\/small>/);
+});

@@ -9,6 +9,14 @@ export function salaryLabel(job) {
   return typeof job.salary === "string" ? job.salary.trim() : "";
 }
 
+// Vacancy row subtitle: approved salary («от 100 000 ₽»), schedule and work format, skipping whatever is missing.
+// Never invent a salary — a job without an approved `salary` string simply shows schedule and format.
+export function vacancySubtitle(job) {
+  const schedule = typeof job.schedule === "string" ? job.schedule.trim() : "";
+  const format = typeof job.format === "string" ? job.format.trim() : "";
+  return [salaryLabel(job), schedule, format].filter(Boolean).join(" · ");
+}
+
 export function vacancyCountLabel(count) {
   const last = count % 10;
   const lastTwo = count % 100;

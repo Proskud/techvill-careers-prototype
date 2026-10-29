@@ -23,3 +23,13 @@ test("footer legal activity paragraph is kept verbatim", () => {
   const source=readFileSync(new URL('../src/Prototype.jsx',import.meta.url),'utf8');
   assert.ok(source.includes("Коды видов деятельности в области информационных технологий, осуществляемых организацией, в соответствии с перечнем видов деятельности в области информационных технологий, утвержденным приказом Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 11 мая 2023 г. N 449: 1.01, 1.03, 11.01."));
 });
+
+test('pentest copy: list items start with a capital, standalone paragraphs drop the final period, abbreviations spaced', () => {
+  const page = readFileSync(new URL('../src/SecurityPage.jsx', import.meta.url), 'utf8').replace(/ /g, ' ');
+  assert.doesNotMatch(page, /<li>[а-яё]/);
+  assert.doesNotMatch(page, /"(внешние|внутренние|веб-сервисы|мобильные) /);
+  assert.doesNotMatch(page, /[а-яё]{2}\.<\/p>/);
+  assert.match(page, /и т\. д\.<\/p>/);
+  assert.match(page, /\(в т\. ч\. сегментация\)/);
+  assert.doesNotMatch(page, /х2/);
+});

@@ -27,7 +27,7 @@ const disclosureTransition = { height: { type: "spring", bounce: 0, duration: 0.
 // `--drawer-h` mirrors the live content height every frame; CSS can cancel it with a negative margin so the card
 // overlaps the next row instead of growing its own grid row.
 function trackHeight(element) {
-  const card = element?.closest(".tech-card");
+  const card = element?.closest(".disclosure-card");
   if (!card) return undefined;
   const observer = new ResizeObserver(() => card.style.setProperty("--drawer-h", `${element.offsetHeight}px`));
   observer.observe(element);

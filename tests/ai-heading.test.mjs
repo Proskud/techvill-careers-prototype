@@ -15,6 +15,7 @@ test('AI blog removes only the introductory placeholder note', () => {
 test('AI directions stack the heading and description without changing the blog header', () => {
   assert.match(styles, /\.ai-directions > \.ai-section-heading \{[^}]*flex-direction: column;[^}]*align-items: flex-start;[^}]*gap: 16px;/);
   assert.match(styles, /\.ai-directions > \.ai-section-heading > p \{[^}]*max-inline-size: min\(100%, 680px\);/);
-  assert.match(source, /<details name="ai-directions"/);
-  assert.match(source, /event\.key === 'Escape'/);
+  assert.match(source, /<Accordion value=\{expanded\} onValueChange=\{onValueChange\} className=\{`ai-directions-grid disclosure-grid/);
+  // Escape, outside press and hover/focus opening live in the shared disclosure hook.
+  assert.match(source, /useHoverDisclosure\(\)/);
 });

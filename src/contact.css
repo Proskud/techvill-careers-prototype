@@ -25,6 +25,15 @@
 .contact-field label > svg { vertical-align: middle; width: 20px; height: 20px; }
 .contact-field input[type="file"] { font-size: 14px; overflow: hidden; }
 .contact-field input[type="file"]::file-selector-button { margin-inline-end: 12px; padding: 8px 12px; border: 0; border-radius: 8px; background: var(--lilac); color: var(--purple-deep); font: inherit; cursor: pointer; }
+.contact-resume { margin: 0; padding: 0; border: 0; }
+.contact-resume legend { margin-block-end: 8px; padding: 0; font-size: 15px; font-weight: 650; }
+/* Segmented Файл / Ссылка switch: native radios, the checked one gets the white raised surface. */
+.contact-resume-switch { display: inline-grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); justify-self: start; gap: 4px; padding: 4px; border-radius: 14px; background: var(--lilac); }
+.contact-resume-switch label { position: relative; display: flex; align-items: center; justify-content: center; min-width: 104px; min-height: 40px; padding: 0 16px; border-radius: 10px; color: var(--purple-deep); font-size: 15px; font-weight: 650; cursor: pointer; transition: background-color 150ms ease-out, box-shadow 150ms ease-out; }
+.contact-resume-switch input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
+.contact-resume-switch label:has(input:checked) { background: #fff; box-shadow: 0 1px 2px rgba(27, 20, 44, .12), 0 0 0 1px rgba(27, 20, 44, .08); }
+.contact-resume-switch label:has(input:focus-visible) { outline: 3px solid var(--purple); outline-offset: 2px; }
+@media (hover: hover) { .contact-resume-switch label:not(:has(input:checked)):hover { background: rgba(255, 255, 255, .55); } }
 .contact-field small { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
 .contact-success { padding-block: 32px; }
 .contact-success h2 { margin: 0 0 24px; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -.045em; }

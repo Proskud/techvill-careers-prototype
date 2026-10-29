@@ -44,6 +44,7 @@ function ContactForm({ kind, id, onClose, job }) {
   const [errors, setErrors] = useState({});
   const [checked, setChecked] = useState(false);
   const [resumeName, setResumeName] = useState("");
+  const [resumeMode, setResumeMode] = useState("file");
   const successTitle = useRef(null);
   useEffect(() => { if (talent && checked) successTitle.current?.focus(); }, [talent, checked]);
   const errorFor = (input) => {
@@ -69,7 +70,7 @@ function ContactForm({ kind, id, onClose, job }) {
   };
   const submit = (event) => {
     event.preventDefault();
-    const controls = [...event.currentTarget.elements].filter((input) => input.name && input.type !== "submit");
+    const controls = [...event.currentTarget.elements].filter((input) => input.name && input.type !== "submit" && input.type !== "radio");
     const next = Object.fromEntries(controls.map((input) => [input.name, errorFor(input)]));
     setErrors(next);
     const invalid = controls.find((input) => next[input.name]);
@@ -90,14 +91,33 @@ function ContactForm({ kind, id, onClose, job }) {
   return <form className="contact-form" noValidate onSubmit={submit}>
     <header><h2 id={`${id}-form-title`}>{talent ? "Отправить резюме" : "Обсудим ваш проект"}</h2><p id={`${id}-form-description`}>{talent ? "Заполните форму и приложите резюме. Мы свяжемся с вами в ближайшее время" : "Заполните форму и расскажите, какое решение нужно вашему бизнесу"}</p><p className="contact-required">* Обязательные поля</p></header>
     <div className="contact-fields">
-      {field("name", talent ? "Имя" : "ФИО", { required: true, autoComplete: "name" })}
-      {talent ? (job ? <div className="contact-field"><label htmlFor={`${id}-position`}>Вакансия</label><input id={`${id}-position`} name="position" readOnly value={job.title} /></div> : <div className="contact-field"><label htmlFor={`${id}-position`}>Выберите позицию <span aria-hidden="true">*</span></label><select id={`${id}-position`} name="position" required defaultValue="" aria-invalid={!!errors.position} aria-describedby={errors.position ? `${id}-position-error` : undefined} onChange={validateField} onBlur={validateField}><option value="" disabled>Выберите позицию</option>{jobs.map((job) => <option value={job.id} key={job.id}>{job.title} · {job.company === "cyberchef" ? "Кибершеф" : "ТехВилл"}</option>)}<option value="other">Другая позиция</option></select>{errors.position && <p className="contact-error" id={`${id}-position-error`}>{errors.position}</p>}</div>) : field("company", "Название компании", { required: true, autoComplete: "organization" })}
+      {field("name", talent ? "Имя" : "ФИО", { required: true, autoComplete: talent ? "given-name" : "name" })}
+      {talent && field("surname", "Фамилия", { required: true, autoComplete: "family-name" })}
+      {!talent && field("company", "Название компании", { required: true, autoComplete: "organization" })}
       {!talent && field("email", "Email", { required: true, type: "email", autoComplete: "email", placeholder: "name@company.ru" })}
       {field("phone", "Телефон", { required: true, type: "tel", autoComplete: "tel", placeholder: "+7 999 123-45-67" })}
       {talent && field("email", "Email", { required: true, type: "email", autoComplete: "email", placeholder: "name@company.ru" })}
+      {talent && (job ? <div className="contact-field contact-field-wide"><label htmlFor={`${id}-position`}>Вакансия</label><input id={`${id}-position`} name="position" readOnly value={job.title} /></div> : <div className="contact-field contact-field-wide"><label htmlFor={`${id}-position`}>Выберите позицию <span aria-hidden="true">*</span></label><select id={`${id}-position`} name="position" required defaultValue="" aria-invalid={!!errors.position} aria-describedby={errors.position ? `${id}-position-error` : undefined} onChange={validateField} onBlur={validateField}><option value="" disabled>Выберите позицию</option>{jobs.map((job) => <option value={job.id} key={job.id}>{job.title} · {job.company === "cyberchef" ? "Кибершеф" : "ТехВилл"}</option>)}<option value="other">Другая позиция</option></select>{errors.position && <p className="contact-error" id={`${id}-position-error`}>{errors.position}</p>}</div>)}
       {field("message", talent ? "Дополнительный комментарий" : "Описание задачи", { wide: true, multiline: true, required: !talent })}
     </div>
-    {talent ? <div className="contact-field"><label htmlFor={`${id}-resume`}><FilePdf aria-hidden="true" /> Приложить резюме <span aria-hidden="true">*</span></label><input id={`${id}-resume`} name="resume" type="file" accept=".pdf,.doc,.docx" required aria-invalid={!!errors.resume} aria-describedby={errors.resume ? `${id}-resume-error` : `${id}-resume-help`} onChange={(event) => { setResumeName(event.target.files?.[0]?.name || ""); validateField(event); }} /><small id={`${id}-resume-help`}>{resumeName || "PDF, DOC или DOCX — до 10 МБ"}</small>{errors.resume && <p className="contact-error" id={`${id}-resume-error`}>{errors.resume}</p>}</div> : <div className="contact-upload"><button type="button" disabled><FilePdf aria-hidden="true" />Приложить файл</button><span>Загрузка файлов пока недоступна</span></div>}
+    {talent ? <fieldset className="contact-field contact-resume">
+      <legend>Резюме <span aria-hidden="true">*</span></legend>
+      {/* Product asked for either a file or a link; only the chosen control is mounted, so only it is required and validated. */}
+      <div className="contact-resume-switch">
+        {[["file", "Файл"], ["link", "Ссылка"]].map(([value, label]) => <label key={value}><input type="radio" name="resumeMode" value={value} checked={resumeMode === value} onChange={() => { setResumeMode(value); setResumeName(""); setChecked(false); setErrors((previous) => ({ ...previous, resume: "", resumeUrl: "" })); }} />{label}</label>)}
+      </div>
+      {resumeMode === "file" ? <>
+        <label className="visually-hidden" htmlFor={`${id}-resume`}>Файл резюме</label>
+        <input id={`${id}-resume`} name="resume" type="file" accept=".pdf,.doc,.docx" required aria-invalid={!!errors.resume} aria-describedby={errors.resume ? `${id}-resume-error` : `${id}-resume-help`} onChange={(event) => { setResumeName(event.target.files?.[0]?.name || ""); validateField(event); }} />
+        <small id={`${id}-resume-help`}>{resumeName || "PDF, DOC или DOCX — до 10 МБ"}</small>
+        {errors.resume && <p className="contact-error" id={`${id}-resume-error`}>{errors.resume}</p>}
+      </> : <>
+        <label className="visually-hidden" htmlFor={`${id}-resumeUrl`}>Ссылка на резюме</label>
+        <input id={`${id}-resumeUrl`} name="resumeUrl" type="url" inputMode="url" autoComplete="url" maxLength={500} placeholder="https://hh.ru/resume/…" required aria-invalid={!!errors.resumeUrl} aria-describedby={errors.resumeUrl ? `${id}-resumeUrl-error` : `${id}-resumeUrl-help`} onBlur={validateField} onChange={() => setChecked(false)} />
+        <small id={`${id}-resumeUrl-help`}>hh.ru, LinkedIn, Google Диск или портфолио</small>
+        {errors.resumeUrl && <p className="contact-error" id={`${id}-resumeUrl-error`}>{errors.resumeUrl}</p>}
+      </>}
+    </fieldset> : <div className="contact-upload"><button type="button" disabled><FilePdf aria-hidden="true" />Приложить файл</button><span>Загрузка файлов пока недоступна</span></div>}
     <div className="contact-consent"><input id={`${id}-consent`} type="checkbox" name="consent" required aria-invalid={!!errors.consent} aria-describedby={errors.consent ? `${id}-consent-error` : undefined} onChange={validateField} /><label htmlFor={`${id}-consent`}>Я даю <a href="https://www.techvill.ru/personal-data" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a> и ознакомлен(а) с <a href="https://www.techvill.ru/privacy-policy" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></label></div>
     {errors.consent && <p className="contact-error" id={`${id}-consent-error`}>{errors.consent}</p>}
     {!talent && <label className="contact-newsletter"><input type="checkbox" name="newsletter" onChange={() => setChecked(false)} />Хочу получать информационные рассылки (необязательно)</label>}
