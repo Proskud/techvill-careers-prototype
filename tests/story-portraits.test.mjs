@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 
 test('Story portraits match the 29 October replacement crops, including transparent cutouts', () => {
   for (const [name, digest] of [
-    ['care-person', '531f4131e7be7709e63b6fbd6758825f637b18f559dc0f07842d5057a48017b8'],
+    ['care-person', '0d7df9d41034abb7fa3d8ad8fc46ef107d4bc9db814ab0dab94a7650388ca0c4'],
     ['mind-person', '2db632dd6a75199a45d623dc85fd800a41553c6f4445c8998d448a3524178be6'],
   ]) {
     const asset = readFileSync(new URL(`../public/assets/stories/${name}.webp`, import.meta.url));
