@@ -610,7 +610,7 @@ function Articles() {
       <div className="home-article-list" aria-label="Материалы блога">
         {careerArticles.filter((article) => !article.blogOnly).slice(0, 4).map((article) => <ArticleCard article={article} key={article.id} />)}
       </div>
-      <a className="article-blog-link" href="/blog">Все записи в блоге <ArrowRight /></a>
+      <a className="article-blog-link" href="/blog">Перейти в блог <ArrowRight /></a>
     </section>
   );
 }
@@ -751,10 +751,13 @@ function Footer() {
           <a href="https://www.techvill.ru/personal-data">Согласия на обработку персональных данных <ArrowRight /></a>
         </div>
       </div>
+      {/* Mirrors the header navigation, plus «Решения», which lives only here. */}
       <nav aria-label="Разделы сайта">
+        <a href="/blog">Блог</a>
+        <a href="/#technology">Команды</a>
+        <a href="/ai">AI в ТехВилле</a>
+        <a href="/vacancies">Вакансии</a>
         <a href="/services">Решения</a>
-        <a href="/ai">AI в ТехВилле</a>
-        <a href="/pentest">Информационная безопасность</a>
       </nav>
       <div className="footer-contacts">
         <FooterSocials />
