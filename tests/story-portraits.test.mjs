@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
-test('Story portraits retain the exact supplied files, including transparent cutouts', () => {
+test('Story portraits match the 29 October replacement crops, including transparent cutouts', () => {
   for (const [name, digest] of [
-    ['care-person', '84788c4db903cce4f61d49561c64fcc598dad9934f9073c5b27837dd18006933'],
-    ['mind-person', 'f484165818bf29a62dfdb2af30d1eb96f3291f63cca5fcb28884f4fe9c7391a5'],
+    ['care-person', '531f4131e7be7709e63b6fbd6758825f637b18f559dc0f07842d5057a48017b8'],
+    ['mind-person', '2db632dd6a75199a45d623dc85fd800a41553c6f4445c8998d448a3524178be6'],
   ]) {
     const asset = readFileSync(new URL(`../public/assets/stories/${name}.webp`, import.meta.url));
     assert.equal(createHash('sha256').update(asset).digest('hex'), digest);
