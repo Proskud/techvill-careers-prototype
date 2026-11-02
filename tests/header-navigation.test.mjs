@@ -36,3 +36,10 @@ test('Old About bookmarks replace the location with home before mounting React',
   }
   assert.match(entry, /} else \{\s+createRoot/);
 });
+
+test('footer page links stand in a column; the nested socials nav keeps its own row layout', () => {
+  const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.site-footer > nav \{\s*display: flex;\s*flex-direction: column;/);
+  assert.doesNotMatch(css, /^\.site-footer nav \{/m);
+  assert.match(css, /@media \(hover: hover\) \{\s*\.site-header nav a:hover::after,\s*\.site-footer nav a:hover::after \{ right: 0; \}/);
+});

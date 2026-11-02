@@ -192,9 +192,9 @@ main,
   transition: right 200ms ease;
 }
 
-.site-header nav a:hover::after,
-.site-footer nav a:hover::after {
-  right: 0;
+@media (hover: hover) {
+  .site-header nav a:hover::after,
+  .site-footer nav a:hover::after { right: 0; }
 }
 
 .site-header > .button {
@@ -233,7 +233,7 @@ main,
 .button:focus-visible,
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgba(112, 36, 255, 0.36);
+  outline: 3px solid var(--purple);
   outline-offset: 4px;
 }
 
@@ -1744,7 +1744,7 @@ a:focus-visible {
 
 .job-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.25fr) 30px;
+  grid-template-columns: minmax(0, 1fr) 30px;
   width: 100%;
   align-items: center;
   gap: 24px;
@@ -1769,8 +1769,6 @@ a:focus-visible {
   line-height: 1.12;
 }
 
-.job-row-meta { display: grid; gap: 7px; color: var(--muted); font-size: 13px; line-height: 1.4; }
-.job-row-meta span:first-child { color: var(--purple-deep); font-weight: 700; }
 .job-row > svg { color: var(--purple); }
 .job-empty { padding: 40px; border: 1px dashed var(--line); border-radius: 20px; background: white; }
 .job-empty p { margin: 0 0 18px; font-size: 18px; }
@@ -1880,8 +1878,7 @@ a:focus-visible {
 .job-summary .button { justify-content: center; inline-size: 100%; }
 /* The form lives in the copy column (≈750px) beside the sticky card instead of spanning the full 1120px. */
 .job-detail-page .job-application { grid-area: form; min-width: 0; margin: 24px 0 0; }
-.job-detail-heading h1, .job-detail-page > h1 { margin: 0 0 12px; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em; overflow-wrap: anywhere; }
-.job-detail-heading > p { max-width: 62ch; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.55; }
+.job-detail-heading h1, .job-detail-page > h1 { margin: 0; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.1; letter-spacing: -0.03em; overflow-wrap: anywhere; }
 .job-detail-body { grid-area: body; max-width: none; margin: 0; }
 .job-detail-body .job-detail-section { padding: 20px 0; }
 .job-detail-section h2 { margin: 0 0 12px; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.2; letter-spacing: -0.02em; }
@@ -1984,7 +1981,7 @@ a:focus-visible {
 
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(260px, 1.15fr) minmax(260px, 1fr) minmax(220px, 0.8fr);
+  grid-template-columns: minmax(260px, 1.15fr) minmax(160px, 0.5fr) minmax(260px, 0.85fr);
   gap: clamp(32px, 5vw, 80px);
   padding: 7vh var(--page-pad);
   background: #f5f7fa;
@@ -1998,14 +1995,22 @@ a:focus-visible {
   line-height: 1.5;
 }
 
-.site-footer nav {
+/* Direct child only: the socials are a nested <nav> with their own row layout. */
+.site-footer > nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px 28px;
+  flex-direction: column;
   align-items: flex-start;
-  align-content: start;
+  gap: 10px;
   font-size: 15px;
 }
+
+.site-footer > nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 24px;
+}
+
+.site-footer > nav a::after { bottom: 0; }
 
 .footer-legal,
 .footer-contacts {
@@ -2181,8 +2186,6 @@ a:focus-visible {
   .job-select-filters select { width: 100%; }
   .job-row { grid-template-columns: minmax(0, 1fr) 24px; gap: 16px; padding: 20px; }
   .job-row-main { display: grid; }
-  .job-row-meta { grid-column: 1; grid-row: 2; display: flex; gap: 10px; }
-  .job-row > svg { grid-column: 2; grid-row: 1 / span 2; }
   .job-row strong { font-size: 24px; }
   .job-row-main small { font-size: 13px; }
   .job-drawer { padding-inline: 20px; }
@@ -2191,7 +2194,6 @@ a:focus-visible {
   .final-actions { flex-direction: column; }
   .final-rut img { height: 52vh; }
   .site-footer { grid-template-columns: 1fr; }
-  .site-footer nav { flex-wrap: wrap; }
   .footer-contacts { margin-top: 4px; }
 }
 
@@ -2349,7 +2351,7 @@ main [id] { scroll-margin-block-start: 120px; }
 .site-footer .footer-socials a:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
 .site-footer .footer-socials a:active { background-color: var(--purple); border-color: var(--purple); color: white; }
 @media (prefers-reduced-motion: reduce) { .site-footer .footer-socials a { transition: none; } }
-.footer-activity-codes { max-inline-size: 100ch; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.footer-activity-codes { max-inline-size: 75ch; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 :where(h1, h2, h3, p, .tech-map-title, .people-benefit-display) { word-break: normal; hyphens: none; }
 :where(h1, h2, h3, h4, h5, h6, .tech-map-title) { text-wrap: balance; }
 :where(p, li, dt, dd, label, figcaption) { text-wrap: pretty; }

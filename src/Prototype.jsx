@@ -622,14 +622,12 @@ function JobDetail({ job }) {
       <div className="job-detail-layout">
       <header className="job-detail-heading">
         <h1 id="job-title">{job.title}</h1>
-        <p>{job.description}</p>
       </header>
-      {/* Summary card: salary only when an approved string exists, then direction, format and the single primary action.
+      {/* Summary card: salary only when an approved string exists, then format, schedule and the single primary action.
           DOM order keeps it right after the heading, so phones see salary and «Откликнуться» before the details. */}
       <aside className="job-summary" aria-label="Коротко о вакансии">
         {salaryLabel(job) && <p className="job-salary"><span>Зарплата</span><strong>{salaryLabel(job)}</strong></p>}
         <dl className="job-summary-facts">
-          <div><dt>Направление</dt><dd>{job.team}</dd></div>
           <div><dt>Формат</dt><dd>{job.format}</dd></div>
           {job.schedule && <div><dt>График</dt><dd>{job.schedule}</dd></div>}
         </dl>
@@ -692,7 +690,7 @@ function Vacancies() {
       <div className="job-list">
         {visibleJobs.map((job) => (
           <a className="job-row" key={job.id} href={`/vacancies/${job.id}`}>
-            <span className="job-row-main"><strong>{job.title}</strong>{vacancySubtitle(job) && <small>{vacancySubtitle(job)}</small>}</span><span className="job-row-meta"><span>{job.team}</span></span><ArrowRight />
+            <span className="job-row-main"><strong>{job.title}</strong>{vacancySubtitle(job) && <small>{vacancySubtitle(job)}</small>}</span><ArrowRight />
           </a>
         ))}
         {visibleJobs.length === 0 && <div className="job-empty">{query.trim() ? <><p>По этому запросу вакансий не найдено.</p><button type="button" onClick={() => setQuery("")}>Сбросить поиск</button></> : <p>Сейчас открытых вакансий нет.</p>}</div>}
@@ -710,12 +708,12 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-company">
         <Brand />
-        <p>© ООО Технологии ВкусВилл, 2025</p>
+        <p>© ООО Технологии ВкусВилл, 2026</p>
         <p>Аккредитованная ИТ-компания (номер в реестре 13167 от 18.12.2020)</p>
         <p>Основной ОКВЭД: 62.01 — разработка компьютерного программного обеспечения</p>
         <div className="footer-legal">
           <a href="https://www.techvill.ru/privacy-policy">Политика конфиденциальности <ArrowRight /></a>
-          <a href="https://www.techvill.ru/personal-data">Согласия на обработку персональных данных <ArrowRight /></a>
+          <a href="https://www.techvill.ru/personal-data">Согласие на обработку персональных данных <ArrowRight /></a>
         </div>
       </div>
       {/* Mirrors the header navigation, plus «Решения», which lives only here. */}
@@ -732,10 +730,10 @@ function Footer() {
         <p>ОГРН: 5157746165605</p>
         <a href="tel:+74951346363">+7 (495) 134-63-63</a>
         <a href="mailto:info@techvill.ru">info@techvill.ru</a>
-        <p className="footer-address">Адрес<br />123592, г. Москва, вн.тер.г. муниципальный округ Строгино, ул. Кулакова, д. 20, к. 1, помещ. 8/1.</p>
+        <p className="footer-address">Адрес<br />123592, г. Москва, вн. тер. г. муниципальный округ Строгино, ул. Кулакова, д. 20, к. 1, помещ. 8/1</p>
       </div>
       <div className="footer-bottom">
-        <p className="footer-activity-codes">Коды видов деятельности в области информационных технологий, осуществляемых организацией, в соответствии с перечнем видов деятельности в области информационных технологий, утвержденным приказом Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 11 мая 2023 г. N 449: 1.01, 1.03, 11.01.</p>
+        <p className="footer-activity-codes">Коды видов деятельности в области информационных технологий, осуществляемых организацией, в соответствии с перечнем видов деятельности в области информационных технологий, утверждённым приказом Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 11 мая 2023 г. № 449: 1.01, 1.03, 11.01.</p>
       </div>
     </footer>
   );

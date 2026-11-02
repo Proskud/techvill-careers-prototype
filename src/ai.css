@@ -67,27 +67,11 @@
 .ai-visual-pages { position: absolute; inset: 32px 48px; display: flex; justify-content: space-between; align-items: center; }
 .ai-visual-pages span { width: 70px; height: 100px; background: white; border-radius: 8px; border: 1px solid var(--line); transform: rotate(-16deg); }
 .ai-visual-pages span:last-child { transform: rotate(16deg); }
-.ai-blog { padding: 88px var(--page-pad); background: var(--lilac); }
-.ai-blog .ai-section-heading h2 { max-width: 680px; }
-.ai-blog .ai-text-link { flex-shrink: 0; }
-.ai-blog-pending { display: flex; align-items: center; gap: 24px; padding: 36px; border: 1px solid var(--line); border-radius: 24px; }
-.ai-blog-pending svg { width: 44px; height: 44px; color: var(--purple); flex-shrink: 0; }
-.ai-blog-pending p { margin: 0; font-size: 18px; color: var(--muted); line-height: 1.5; }
-.ai-blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.ai-blog-card { padding: 24px; border-radius: 24px; background: white; }
-.ai-blog-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 16px; }
-.ai-blog-card h3 { font-size: 24px; line-height: 1.2; }
-.ai-blog-card p { color: var(--muted); line-height: 1.6; }
-.ai-blog-placeholder-image { display: grid; place-items: center; aspect-ratio: 16/10; border-radius: 16px; background: var(--lilac); }
-.ai-blog-placeholder-image svg { width: 52px; height: 52px; color: var(--purple); opacity: .5; }
-.ai-blog-placeholder .ai-blog-status { font-size: 13px; margin: 22px 0 12px; }
-.ai-blog-placeholder h3 { margin: 0; font-size: 23px; line-height: 1.22; letter-spacing: -.035em; }
 .ai-careers { display: flex; align-items: center; justify-content: space-between; gap: 36px; padding: 88px var(--page-pad); background: var(--purple-deep); color: white; }
 .ai-careers h2 { margin: 0; font-size: clamp(40px, 5vw, 76px); line-height: 1.06; letter-spacing: -.05em; font-weight: 800; }
 .ai-careers .button { flex-shrink: 0; }
 .ai-page :is(a, summary):focus-visible { outline: 3px solid var(--purple); outline-offset: 5px; }
 .ai-page .ai-direction summary:focus-visible { outline-offset: -5px; }
-.ai-blog-placeholder h3 { font-size: clamp(20px, 2vw, 23px); }
 .ai-direction:last-child:nth-child(odd) { grid-column: 1 / -1; }
 @media (max-width: 620px) {
   .ai-direction summary { grid-template-columns: 40px minmax(0, 1fr); padding: 20px 16px; }
@@ -116,12 +100,9 @@
   .ai-principles { grid-template-columns: 1fr; gap: 36px; padding-block: 48px; }
   .ai-principle h2 { margin: 16px 0 12px; font-size: 25px; max-width: none; }
   .ai-directions { padding-block: 64px; }
-  .ai-directions-grid, .ai-blog-grid { grid-template-columns: minmax(0, 1fr); }
+  .ai-directions-grid { grid-template-columns: minmax(0, 1fr); }
   .ai-direction-details { padding: 0 24px 28px; }
   .ai-section-heading { margin-bottom: 32px; }
-  .ai-blog { padding-block: 64px; }
-  .ai-blog-pending { align-items: flex-start; padding: 24px; gap: 16px; }
-  .ai-blog-pending p { font-size: 16px; }
   .ai-careers { flex-direction: column; align-items: flex-start; padding-block: 64px; gap: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { .ai-direction-toggle svg { transition: none; } }

@@ -87,3 +87,12 @@ test('vacancy form sits in the copy column and takes either a resume file or a l
   assert.match(forms, /name="resumeUrl" type="url"/);
   assert.match(forms, /input\.type !== "radio"/);
 });
+
+test('vacancy direction and description are not rendered in rows or on vacancy pages', () => {
+  assert.doesNotMatch(source, /job\.description/);
+  assert.doesNotMatch(source, /job\.team/);
+  assert.doesNotMatch(source, /<dt>Направление<\/dt>/);
+  assert.doesNotMatch(source, /job-row-meta/);
+  assert.doesNotMatch(css, /job-row-meta/);
+  assert.match(css, /\.job-row \{\s*display: grid;\s*grid-template-columns: minmax\(0, 1fr\) 30px;/);
+});

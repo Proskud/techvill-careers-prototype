@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./AnimateAccordion.jsx";
 import { useHoverDisclosure } from "./hooks/useHoverDisclosure.js";
 import { ArrowDown, ArrowRight, BookOpen, CaretDown, ChartLineUp, ChatCircleDots, Sparkle, Basket } from "@phosphor-icons/react";
-import { aiArticles, aiDirections, aiPrinciples } from "./data/ai.js";
+import { aiDirections, aiPrinciples } from "./data/ai.js";
 import "./ai.css";
 
 const principleIcons = { data: "data", target: "ai", experiment: "learning" };
@@ -72,13 +72,6 @@ export function AiPage() {
           </AccordionContent>
         </AccordionItem>)}
       </Accordion>
-    </section>
-
-    <section className="ai-blog" aria-labelledby="ai-blog-title">
-      <header className="ai-section-heading"><h2 id="ai-blog-title">Как мы создаём AI-решения</h2><a className="ai-text-link" href="/blog">В блог ТехВилла <ArrowRight /></a></header>
-      {aiArticles.length ? <div className="ai-blog-grid">{aiArticles.slice(0, 3).map((article) => <a className="ai-blog-card" href={article.href} key={article.id}>{article.image && <img src={article.image} alt="" loading="lazy" />}<h3>{article.title}</h3><p>{article.description}</p><ArrowRight aria-hidden="true" /></a>)}</div> : <>
-        <div className="ai-blog-grid">{["Прогнозирование спроса", "Рекомендательные системы", "Корпоративные AI-инструменты"].map((topic) => <article className="ai-blog-card ai-blog-placeholder" key={topic}><div className="ai-blog-placeholder-image" aria-hidden="true"><BookOpen weight="duotone" /></div><p className="ai-blog-status">Материал готовится</p><h3>{topic}</h3></article>)}</div>
-      </>}
     </section>
 
     <section className="ai-careers" aria-labelledby="ai-careers-title">

@@ -73,4 +73,3 @@ export const aiDirections = [
 
 // Populate with approved { id, title, description, href, image } entries.
 // Empty is intentional: do not turn invented announcements into real AI articles.
-export const aiArticles = [];

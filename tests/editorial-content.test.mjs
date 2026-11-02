@@ -21,7 +21,7 @@ test("four home teasers and five Habr publications have real covers and original
 });
 test("footer legal activity paragraph is kept verbatim", () => {
   const source=readFileSync(new URL('../src/Prototype.jsx',import.meta.url),'utf8');
-  assert.ok(source.includes("Коды видов деятельности в области информационных технологий, осуществляемых организацией, в соответствии с перечнем видов деятельности в области информационных технологий, утвержденным приказом Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 11 мая 2023 г. N 449: 1.01, 1.03, 11.01."));
+  assert.ok(source.includes("Коды видов деятельности в области информационных технологий, осуществляемых организацией, в соответствии с перечнем видов деятельности в области информационных технологий, утверждённым приказом Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 11 мая 2023 г. № 449: 1.01, 1.03, 11.01."));
 });
 
 test('pentest copy: list items start with a capital, standalone paragraphs drop the final period, abbreviations spaced', () => {
