@@ -26,7 +26,7 @@ test("hyphenated job/technology names stay whole but URL spelling is unchanged",
 
 test("vacancy search accepts ordinary spaces and hyphens in typographically bound titles", () => {
   const job = { title: 'ML‑программист в\u00a0команде', direction: 'ai' };
-  assert.equal(matchesVacancy(job, [], 'ML-программист в команде'), true);
+  assert.equal(matchesVacancy(job, 'ML-программист в команде'), true);
 });
 
 test("short words bind before inline markup, quotes and at JSX text boundaries", () => {

@@ -1,9 +1,3 @@
-export const vacancyDirections = [
-  { key: "ai", label: "AI и данные" },
-  { key: "platform", label: "Платформа" },
-  { key: "product", label: "Продукты" },
-];
-
 // Optional approved display string; missing salary must not create an empty block.
 export function salaryLabel(job) {
   return typeof job.salary === "string" ? job.salary.trim() : "";
@@ -24,13 +18,8 @@ export function vacancyCountLabel(count) {
   return `${count} ${noun}`;
 }
 
-export function directionLabel(selected) {
-  if (!selected.length) return "Все направления";
-  if (selected.length === 1) return vacancyDirections.find(item => item.key === selected[0])?.label || "Все направления";
-  return `${selected.length} направления`;
-}
-
-export function matchesVacancy(job, selected, query) {
+// Title search: case-, ё- and dash-insensitive, so ordinary keyboard queries match typographically formatted titles.
+export function matchesVacancy(job, query) {
   const normalized = value => value.trim().toLocaleLowerCase("ru").replaceAll("ё", "е").replaceAll("\u00a0", " ").replace(/[‑–—]/g, "-");
-  return (!selected.length || selected.includes(job.direction)) && normalized(job.title).includes(normalized(query));
+  return normalized(job.title).includes(normalized(query));
 }

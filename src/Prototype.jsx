@@ -654,7 +654,7 @@ function Vacancies() {
   const companyTabs = [{ key: "techvill", label: "ТехВилл" }, { key: "cyberchef", label: "Кибершеф" }];
   const tabRefs = useRef([]);
   const companyJobs = useMemo(() => jobs.filter((job) => job.company === company), [company]);
-  const visibleJobs = useMemo(() => companyJobs.filter((job) => matchesVacancy(job, [], query)), [companyJobs, query]);
+  const visibleJobs = useMemo(() => companyJobs.filter((job) => matchesVacancy(job, query)), [companyJobs, query]);
   const selectCompany = (key) => setCompany(key);
   const handleTabKey = (event, index) => {
     const next = event.key === "Home" ? 0 : event.key === "End" ? 1 : event.key === "ArrowRight" || event.key === "ArrowLeft" ? (index + 1) % 2 : null;

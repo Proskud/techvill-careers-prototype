@@ -81,8 +81,6 @@
   .ai-direction summary { height: auto; grid-template-rows: auto 1fr auto; }
   .ai-directions-grid { grid-auto-rows: auto; }
   .ai-direction h3 { font-size: 18px; }
-  .ai-direction-icon { inline-size: 40px; block-size: 40px; }
-  .ai-direction-icon svg { inline-size: 26px; block-size: 26px; }
 }
 .ai-careers a:focus-visible { outline-color: var(--lime); }
 
