@@ -45,7 +45,7 @@ test("serves the app shell without redirecting a client-side route", async () =>
 });
 
 test("serves standalone vacancy detail URLs on direct load and reload", async () => {
-  for (const path of ["/vacancies/1", "/vacancies/4/", "/vacancies/missing", "/blog", "/blog/atomic-people", "/blog/ecosystem/", "/blog/missing", "/ai", "/ai/", "/services", "/pentest", "/pentest/"]) {
+  for (const path of ["/vacancies/1", "/vacancies/4/", "/vacancies/missing", "/blog", "/blog/atomic-people", "/blog/ecosystem/", "/blog/missing", "/ai", "/ai/", "/services", "/pentest", "/pentest/", "/privacy-policy", "/personal-data"]) {
     const calls = [];
     const response = await worker.fetch(new Request(`https://example.test${path}`, { headers: { accept: "text/html" } }), {
       ASSETS: { fetch: async (request) => {

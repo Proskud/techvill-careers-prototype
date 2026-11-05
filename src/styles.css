@@ -2395,3 +2395,21 @@ main [id] { scroll-margin-block-start: 120px; }
   .people-bento-card-0 .people-bento-copy h3 { font-size: 30px; }
   .people-benefit-card.is-lead .people-benefit-copy p { font-size: 20px; }
 }
+
+/* Legal pages (/privacy-policy, /personal-data): texts moved from the old site; a plain reading column. */
+.legal-page { max-width: 760px; margin-inline: auto; padding: 140px var(--page-pad) 88px; box-sizing: content-box; }
+.legal-page h1 { margin: 0 0 24px; font-size: clamp(22px, 7.4vw, 44px); overflow-wrap: break-word; line-height: 1.15; letter-spacing: -0.03em; text-wrap: balance; }
+.legal-page h2 { margin: 48px 0 16px; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.25; letter-spacing: -0.02em; text-wrap: balance; }
+.legal-page h3 { margin: 28px 0 12px; font-size: 18px; line-height: 1.35; text-wrap: balance; }
+.legal-page p, .legal-page li { max-width: 70ch; margin: 0 0 12px; color: #484654; font-size: 16px; line-height: 1.6; text-wrap: pretty; overflow-wrap: break-word; }
+.legal-page ul { margin: 0 0 12px; padding-inline-start: 1.25em; }
+.legal-page li { margin-block-end: 6px; }
+.legal-page .legal-intro { color: var(--muted); font-size: 18px; }
+.legal-toc { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 8px; }
+.legal-toc a { display: inline-flex; align-items: center; min-block-size: 40px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--purple-deep); font-size: 14px; font-weight: 650; text-decoration: none; transition: background-color 150ms ease-out, border-color 150ms ease-out; }
+@media (hover: hover) { .legal-toc a:hover { background: var(--lilac); border-color: rgba(112, 36, 255, 0.42); } }
+.legal-section { scroll-margin-top: 110px; }
+.legal-page .legal-section-title { color: var(--ink); font-weight: 650; }
+.legal-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 40px; color: var(--purple-deep); font-weight: 700; text-underline-offset: 4px; }
+.legal-link svg { inline-size: 18px; block-size: 18px; }
+@media (max-width: 760px) { .legal-page { padding-top: 108px; padding-bottom: 64px; } .legal-page h2 { margin-top: 40px; } }

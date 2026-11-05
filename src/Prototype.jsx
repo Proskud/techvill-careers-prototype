@@ -20,6 +20,7 @@ import { ArticleDetail } from "./ArticleDetail.jsx";
 import { AiPage } from "./AiPage.jsx";
 import { ServicesPage } from "./ServicesPage.jsx";
 import { SecurityPage } from "./SecurityPage.jsx";
+import { PersonalDataPage, PrivacyPolicyPage } from "./LegalPage.jsx";
 import { ContactBanner, TalentApplication } from "./ContactForms.jsx";
 import { matchesVacancy, salaryLabel, vacancyCountLabel, vacancySubtitle } from "./data/vacancy-filters.mjs";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./AnimateAccordion.jsx";
@@ -712,8 +713,8 @@ function Footer() {
         <p>Аккредитованная ИТ-компания (номер в реестре 13167 от 18.12.2020)</p>
         <p>Основной ОКВЭД: 62.01 — разработка компьютерного программного обеспечения</p>
         <div className="footer-legal">
-          <a href="https://www.techvill.ru/privacy-policy">Политика конфиденциальности <ArrowRight /></a>
-          <a href="https://www.techvill.ru/personal-data">Согласие на обработку персональных данных <ArrowRight /></a>
+          <a href="/privacy-policy">Политика конфиденциальности <ArrowRight /></a>
+          <a href="/personal-data">Согласие на обработку персональных данных <ArrowRight /></a>
         </div>
       </div>
       {/* Mirrors the header navigation, plus «Решения», which lives only here. */}
@@ -752,7 +753,9 @@ export function Prototype() {
   const isAiPage = path === "/ai";
   const isServicesPage = path === "/services";
   const isSecurityPage = path === "/pentest";
-  const isStandalonePage = isVacanciesPage || isBlogPage || isAiPage || isServicesPage || isSecurityPage;
+  const isPrivacyPage = path === "/privacy-policy";
+  const isPersonalDataPage = path === "/personal-data";
+  const isStandalonePage = isVacanciesPage || isBlogPage || isAiPage || isServicesPage || isSecurityPage || isPrivacyPage || isPersonalDataPage;
   usePageMotion(rootRef, reducedMotion, isStandalonePage);
 
   return (
@@ -760,7 +763,7 @@ export function Prototype() {
       <a className="skip-link" href="#main-content">Перейти к содержанию</a>
       {!isStandalonePage && <Suspense fallback={null}><ExperienceCanvas reducedMotion={reducedMotion} /></Suspense>}
       <Header isVacanciesPage={isVacanciesPage} isBlogPage={isBlogPage} isAiPage={isAiPage} />
-      <main id="main-content">{isSecurityPage ? <SecurityPage /> : isServicesPage ? <ServicesPage /> : isAiPage ? <AiPage /> : isBlogPage ? (isArticleDetail ? <ArticleDetail article={article} /> : <Blog />) : isVacanciesPage ? (isJobDetail ? <JobDetail job={job} /> : <Vacancies />) : <><Hero /><Mission /><CompanyPrinciple /><TechnologyStories /><People /><Technology /><Articles /></>}</main>
+      <main id="main-content">{isPrivacyPage ? <PrivacyPolicyPage /> : isPersonalDataPage ? <PersonalDataPage /> : isSecurityPage ? <SecurityPage /> : isServicesPage ? <ServicesPage /> : isAiPage ? <AiPage /> : isBlogPage ? (isArticleDetail ? <ArticleDetail article={article} /> : <Blog />) : isVacanciesPage ? (isJobDetail ? <JobDetail job={job} /> : <Vacancies />) : <><Hero /><Mission /><CompanyPrinciple /><TechnologyStories /><People /><Technology /><Articles /></>}</main>
       <Footer />
     </div>
   );
